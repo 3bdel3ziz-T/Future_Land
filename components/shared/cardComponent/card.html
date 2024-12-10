@@ -1,3 +1,22 @@
-  <slot name="title"></slot>
-  <span>pla pla pla</span>
-  <slot name="description"></slot>
+<div class="rounded-lg flex items-center flex-col justify-center gap-3">
+  <!-- Background Image -->
+  <div class="relative w-full max-w-[345px] h-[445px] rounded-2xl overflow-hidden">
+    <img alt="Service Image" class="w-full h-full object-cover" loading="lazy">
+    <!-- Overlay Text -->
+    <div
+      class="absolute inset-0 flex flex-col justify-end p-4 bg-gradient-to-t from-black/60 via-black/20 to-transparent to-60% text-white">
+      <h3 class="text-2xl font-bold">
+        <slot name="title"></slot>
+      </h3>
+      <p class="text-lg mt-2 line-clamp-4">
+        <slot name="description"></slot>
+      </p>
+    </div>
+  </div>
+
+  <!-- Button -->
+  <button
+    class=" flex justify-center px-6 py-2 bg-gray-900 text-white text-lg font-medium rounded-3xl hover:bg-gray-800">
+    order now
+  </button>
+</div>

@@ -1,20 +1,22 @@
-// components/shared/headingComponent/heading.js
 export default class HeadingComponent extends HTMLElement {
-  constructor() {
-    super();
+	styleSheetPath = "./app/styles/output.css";
+	templatePath = "./components/shared/headingComponent/heading.html";
+	constructor() {
+		super();
+		this.attachShadow({ mode: "open" });
 	}
 
 	async connectedCallback() {
-		await this.renderView();
+		this.shadowRoot.innerHTML = `
+    <link rel="stylesheet" href="${this.styleSheetPath}">
+  ${await this.renderView()}`;
 	}
 
 	async renderView() {
 		try {
-			const response = await fetch(
-				"./components/shared/headingComponent/heading.html"
-			);
+			const response = await fetch(`${this.templatePath}`);
 			const template = await response.text();
-			this.innerHTML = template;
+			return template;
 		} catch (error) {
 			console.error("Error loading heading template:", error);
 		}

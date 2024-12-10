@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+	@font-face {
+		font-family: "Alumni Sans";
+		font-style: normal;
+		font-weight: 400;
+		font-display: swap;
+		src: url("https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+	}
+}
+
 @layer components {
 	.link-hover {
 		@apply overflow-hidden after:duration-200 duration-150 text-Dark hover:text-Green;

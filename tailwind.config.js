@@ -12,6 +12,9 @@ module.exports = {
 				Green: "#8DC543",
 			},
 		},
+		fontFamily: {
+			alumni: ["Alumni Sans"],
+		},
 	},
 	plugins: [],
 };

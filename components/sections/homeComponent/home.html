@@ -14,20 +14,33 @@
             class="explore-button group/button relative overflow-hidden mt-4 text-xl duration-150 text-white hover:text-white bg-Green hover:bg-transparent border-2 hover:border-Green font-medium rounded-2xl px-6 py-3 w-fit mx-auto">Explore
             Now
             <div
-                class="absolute top-1/2 left-1/2 transform origin-center -translate-x-1/2 -translate-y-1/2 rounded-1/2 w-0 h-0 group-hover/button:w-72 group-hover/button:h-72 duration-[800ms] rounded-1/2 bg-Green transition-all ease-in-out z-[-1]">
+                class="absolute top-1/2 left-1/2 transform origin-center -translate-x-1/2 -translate-y-1/2 w-0 h-0 group-hover/button:w-72 group-hover/button:h-72 duration-[800ms] rounded-1/2 bg-Green transition-all ease-in-out z-[-1]">
             </div>
         </button>
     </div>
-    <section>
-        <!-- <heading-component></heading-component> -->
-        <div class="holder">
-            <card-component>
-                <p slot="title">this is title</p>
-                <p slot="description">this is description</p>
-                <p>this is heading</p>
-                <p>this is heading</p>
+    <section class="services">
+        <heading-component>our services</heading-component>
+        <div class="holder grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <card-component imgPath="./app/assets/wheat.png">
+                <span slot="title">this is title</span>
+                <span slot="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum nobis nemo
+                    consectetur modi facere quia doloribus aliquid quo harum minima.</span>
+            </card-component>
+            <card-component imgPath="./app/assets/meat.png">
+                <span slot="title">this is title</span>
+                <span slot="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum nobis nemo
+                    consectetur modi facere quia doloribus aliquid quo harum minima.</span>
+            </card-component>
+            <card-component imgPath="./app/assets/dates.png">
+                <span slot="title">this is title</span>
+                <span slot="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum nobis nemo
+                    consectetur modi facere quia doloribus aliquid quo harum minima.</span>
             </card-component>
         </div>
     </section>
-    <script src="./home.js"></script>
+    <div class="text my-16 p-6 text-white rounded-3xl bg-Dark">
+        <h2 class="text-4xl md:text-5xl font-semibold"><span class="block">Ready to Elevate your </span>opportunities?
+        </h2>
+        <p class="mt-6 text-2xl font-light">start your first order with us from here.</p>
+    </div>
 </div>
