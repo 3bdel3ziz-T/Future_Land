@@ -1,5 +1,5 @@
-<footer class=" text-Dark">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<footer class=" text-Dark custom-container">
+    <div class="">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-10">
             <!-- About Section -->
             <div class="space-y-4">
@@ -34,28 +34,21 @@
             </div>
 
             <!-- Social Links -->
-            <div class="space-y-4">
-                <h3 class="text-lg font-semibold text-Dark">Follow Us</h3>
-                <div class="flex space-x-4">
-                    <a href="#" class="text-gray-400 hover:text-Green transition-colors duration-300">
-                        <i class="fab fa-facebook text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-Green transition-colors duration-300">
-                        <i class="fab fa-twitter text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-Green transition-colors duration-300">
-                        <i class="fab fa-instagram text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-Green transition-colors duration-300">
-                        <i class="fab fa-linkedin text-xl"></i>
-                    </a>
-                </div>
+            <div class="space-y-4 ">
+                <h3 class="text-lg font-semibold text-Dark">send us a message</h3>
+                <div class="flex items-center rounded-2xl border border-Green border-solid overflow-hidden">
+                    <input type="email" placeholder="Enter your email address" class="w-full p-2 text-lg text-gray-600 border-none outline-none">
+                    <button class="text-white font-medium bg-Green h-full w-6 transition-colors duration-300">
+                        <svg class="w-6 h-full fill-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path></svg>
+                    
+                    </button>
+                  </div>
             </div>
         </div>
-
+        
         <!-- Bottom Bar -->
         <div class=" py-3 border-t border-Dark text-center text-Dark">
-            <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+            <p>&copy; <time id="currentYear"></time> Future Land. All rights reserved.</p>
         </div>
     </div>
 </footer>
