@@ -13,6 +13,9 @@
 }
 
 @layer components {
+	.btn-dark {
+		@apply bg-Dark text-white rounded-md p-2 hover:bg-transparent hover:text-Dark border-2 hover:border-Dark font-medium transition ease-in-out duration-150;
+	}
 	.marker {
 		@apply absolute rounded-2xl bg-Dark left-3 top-2 h-4;
 	}
