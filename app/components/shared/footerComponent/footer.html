@@ -78,7 +78,7 @@
 
                 </div>
                 <ul class="space-y-2 text-gray-400">
-                    <li>Email: info@example.com</li>
+                    <li>Email:<a mailto="info@example.com">info@example.com</a></li>
                     <li>Phone: (123) 456-7890</li>
                     <li>Address: 123 Street Name, City, Country</li>
                 </ul>
@@ -99,13 +99,13 @@
                                 placeholder="Enter your email address" />
 
                             <button
-                                class="bg-Green text-white rounded-md p-2 hover:bg-transparent hover:text-Green border-2 hover:border-Green font-medium transition ease-in-out duration-150">
+                                class="bg-Dark text-white rounded-md p-2 hover:bg-transparent hover:text-Dark border-2 hover:border-Dark font-medium transition ease-in-out duration-150">
                                 Subscribe
                             </button>
                         </form>
 
                         <div class="flex justify-center mt-4">
-                            <a href="#" class="text-sm text-gray-600 hover:underline">Privacy Policy</a>
+                            <a href="#" class="text-sm text-Dark hover:underline">Privacy Policy</a>
                         </div>
                     </div>
                 </div>
@@ -115,7 +115,7 @@
 
         <!-- Bottom Bar -->
         <div class=" py-3 border-t border-Dark text-center text-Dark">
-            <p>&copy; <time id="currentYear"></time> Future Land. All rights reserved.</p>
+            <p>&copy; <time id="currentYear"></time> {{companyName}}. All rights reserved.</p>
         </div>
     </div>
 </footer>

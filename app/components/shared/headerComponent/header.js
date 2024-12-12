@@ -1,7 +1,6 @@
-export default class FooterComponent extends HTMLElement {
+export default class Header extends HTMLElement {
 	styleSheetPath = "./app/styles/output.css";
-	templatePath = "./components/shared/footerComponent/footer.html";
-	currentYear = new Date().getFullYear();
+	templatePath = "./app/components/shared/headerComponent/header.html";
 	constructor() {
 		super();
 		this.attachShadow({ mode: "open" });
@@ -11,8 +10,6 @@ export default class FooterComponent extends HTMLElement {
 		this.shadowRoot.innerHTML = `
 				<link rel="stylesheet" href="${this.styleSheetPath}">
 				${await this.renderView()}`;
-		const year = this.shadowRoot.querySelector("#currentYear");
-		year.textContent = this.currentYear;
 	}
 	async renderView() {
 		try {
@@ -20,10 +17,10 @@ export default class FooterComponent extends HTMLElement {
 			const template = await response.text();
 			return template;
 		} catch (error) {
-			console.error("Error loading footer template:", error);
+			console.error(`Error: ${error}`);
 		}
 	}
 }
 
 // Register the custom element
-customElements.define("footer-component", FooterComponent);
+window.customElements.define("header-component", Header);

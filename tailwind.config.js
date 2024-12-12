@@ -2,8 +2,8 @@
 module.exports = {
 	content: [
 		"./*.{html,js}",
-		"./components/sections/**/*.{html,js}",
-		"./components/shared/**/*.{html,js}",
+		"./app/components/sections/**/*.{html,js}",
+		"./app/components/shared/**/*.{html,js}",
 	],
 	theme: {
 		extend: {

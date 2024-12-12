@@ -1,6 +1,6 @@
-export default class Header extends HTMLElement {
+export default class HeadingComponent extends HTMLElement {
 	styleSheetPath = "./app/styles/output.css";
-	templatePath = "./components/shared/headerComponent/header.html";
+	templatePath = "./app/components/shared/headingComponent/heading.html";
 	constructor() {
 		super();
 		this.attachShadow({ mode: "open" });
@@ -8,19 +8,19 @@ export default class Header extends HTMLElement {
 
 	async connectedCallback() {
 		this.shadowRoot.innerHTML = `
-				<link rel="stylesheet" href="${this.styleSheetPath}">
-				${await this.renderView()}`;
+    <link rel="stylesheet" href="${this.styleSheetPath}">
+  ${await this.renderView()}`;
 	}
+
 	async renderView() {
 		try {
 			const response = await fetch(`${this.templatePath}`);
 			const template = await response.text();
 			return template;
 		} catch (error) {
-			console.error("Error loading footer template:", error);
+			console.error(`Error: ${error}`);
 		}
 	}
 }
 
-// Register the custom element
-window.customElements.define("header-component", Header);
+window.customElements.define("heading-component", HeadingComponent);

@@ -1,4 +1,4 @@
-import '../../shared/headingComponent/heading.js';
+import '../../shared/headingComponent/heading.js';   
 export default class HomeComponent extends HTMLElement {
     selector = 'home-component';
     // template;
@@ -13,7 +13,7 @@ export default class HomeComponent extends HTMLElement {
     }
     async render() {
         try {
-            const response = await fetch('./components/sections/homeComponent/home.html');
+            const response = await fetch('./app/components/sections/homeComponent/home.html');
             const template = await response.text();
             this.innerHTML = template;
             console.log(template);

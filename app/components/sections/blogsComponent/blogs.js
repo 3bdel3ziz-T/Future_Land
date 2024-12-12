@@ -1,6 +1,8 @@
-export default class CardComponent extends HTMLElement {
+import "../../shared/headingComponent/heading.js";
+// import "./blogItemComponent/blogItem.js";
+export default class BlogsComponent extends HTMLElement {
 	styleSheetPath = "./app/styles/output.css";
-	templatePath = "./components/shared/cardComponent/card.html";
+	templatePath = "./app/components/sections/blogsComponent/blogs.html";
 	constructor() {
 		super();
 		this.attachShadow({ mode: "open" });
@@ -10,18 +12,17 @@ export default class CardComponent extends HTMLElement {
 		this.shadowRoot.innerHTML = `
     <link rel="stylesheet" href="${this.styleSheetPath}">
   ${await this.renderView()}`;
-		const imgPath = this.getAttribute("imgPath");
-		this.shadowRoot.querySelector("img").src = imgPath;
 	}
 	async renderView() {
 		try {
 			const response = await fetch(`${this.templatePath}`);
-			return await response.text();
+			const template = await response.text();
+			return template;
 		} catch (error) {
-			console.error("Error loading card template:", error);
+			console.error(`Error: ${error}`);
 		}
 	}
 }
 
 // Register the custom element
-customElements.define("card-component", CardComponent);
+customElements.define("card-component", BlogsComponent);
