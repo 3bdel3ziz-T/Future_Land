@@ -13,6 +13,9 @@
 }
 
 @layer components {
+	.marker {
+		@apply absolute rounded-2xl bg-Dark left-3 top-2 h-4;
+	}
 	.link-hover {
 		@apply overflow-hidden after:duration-200 duration-150 text-Dark hover:text-Green;
 	}
