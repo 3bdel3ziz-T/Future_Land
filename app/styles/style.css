@@ -20,7 +20,7 @@
 		@apply absolute rounded-2xl bg-Dark left-3 top-2 h-4;
 	}
 	.link-hover {
-		@apply overflow-hidden after:duration-200 duration-150 text-Dark hover:text-Green;
+		@apply overflow-hidden after:duration-200 duration-300 hover:bg-Sky md:hover:bg-transparent text-Dark hover:text-Green;
 	}
 	.link-hover-after {
 		@apply after:h-[2px] after:w-full after:bg-Green after:-translate-x-full after:block hover:after:translate-x-0;
@@ -41,6 +41,32 @@ body {
 	background-color: #f8f8f8;
 	height: fit-content;
 	width: 100dvw;
+}
+
+@media (max-width: 767px) {
+	.nav {
+		position: absolute;
+		top: 70px;
+		right: 0;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		background: white;
+	}
+	.nav-link {
+		padding: 16px;
+		width: 100%;
+		font-size: 18px;
+	}
+}
+@media (min-width: 768px) {
+	.nav {
+		display: flex;
+		flex-direction: row;
+	}
+	.nav-link:not(:last-of-type) {
+		margin-right: 26px;
+	}
 }
 
 .custom-container {

@@ -604,7 +604,7 @@ video {
   overflow: hidden;
   --tw-text-opacity: 1;
   color: rgb(30 41 59 / var(--tw-text-opacity, 1));
-  transition-duration: 150ms;
+  transition-duration: 300ms;
 }
 
 .link-hover::after {
@@ -613,25 +613,16 @@ video {
 }
 
 .link-hover:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(240 245 250 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
   color: rgb(141 197 67 / var(--tw-text-opacity, 1));
 }
 
-.link-hover-after::after {
-  display: block;
-  height: 2px;
-  width: 100%;
-  --tw-translate-x: -100%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  content: var(--tw-content);
-  --tw-bg-opacity: 1;
-  background-color: rgb(141 197 67 / var(--tw-bg-opacity, 1));
-}
-
-.link-hover-after:hover::after {
-  content: var(--tw-content);
-  --tw-translate-x: 0px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+@media (min-width: 768px) {
+  .link-hover:hover {
+    background-color: transparent;
+  }
 }
 
 .rounded-1\/2 {
@@ -939,6 +930,10 @@ video {
           user-select: none;
 }
 
+.resize {
+  resize: both;
+}
+
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -997,12 +992,6 @@ video {
 
 .gap-8 {
   gap: 2rem;
-}
-
-.space-x-8 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(2rem * var(--tw-space-x-reverse));
-  margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {
@@ -1221,11 +1210,6 @@ video {
   line-height: 2.5rem;
 }
 
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
-}
-
 .text-6xl {
   font-size: 3.75rem;
   line-height: 1;
@@ -1234,11 +1218,6 @@ video {
 .text-8xl {
   font-size: 6rem;
   line-height: 1;
-}
-
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
 }
 
 .text-lg {
@@ -1373,6 +1352,35 @@ body {
   width: 100dvw;
 }
 
+@media (max-width: 767px) {
+  .nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: white;
+  }
+
+  .nav-link {
+    padding: 16px;
+    width: 100%;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .nav-link:not(:last-of-type) {
+    margin-right: 26px;
+  }
+}
+
 .custom-container {
   width: 100%;
   max-width: 1200px;
@@ -1427,14 +1435,28 @@ body {
   }
 }
 
+@media (min-width: 768px) {
+  .md\:link-hover-after::after {
+    display: block;
+    height: 2px;
+    width: 100%;
+    --tw-translate-x: -100%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    content: var(--tw-content);
+    --tw-bg-opacity: 1;
+    background-color: rgb(141 197 67 / var(--tw-bg-opacity, 1));
+  }
+
+  .md\:link-hover-after:hover::after {
+    content: var(--tw-content);
+    --tw-translate-x: 0px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+}
+
 .hover\:border-Green:hover {
   --tw-border-opacity: 1;
   border-color: rgb(141 197 67 / var(--tw-border-opacity, 1));
-}
-
-.hover\:bg-gray-700:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(55 65 81 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:bg-gray-800:hover {
@@ -1503,9 +1525,20 @@ body {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.peer\/burger:checked ~ .peer-checked\/burger\:hidden {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .sm\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
 @media (min-width: 768px) {
-  .md\:flex {
-    display: flex;
+  .md\:static {
+    position: static;
   }
 
   .md\:hidden {

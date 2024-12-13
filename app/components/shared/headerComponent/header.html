@@ -1,16 +1,18 @@
 <div class="custom-container  top-0 z-50">
-    <header class="flex justify-between items-center py-4">
+    <header class="flex md:static justify-between items-center py-4">
         <div class="logo w-24">
 
             <slot name="logo"></slot>
 
         </div>
 
-        <slot name="nav"></slot>
-
-        <svg class="burger-menu select-none md:hidden w-8 h-8 cursor-pointer duration-150 hover:fill-green-500"
-            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
-        </svg>
+        <input type="checkbox" name="" class="peer/burger hidden" id="toggle">
+        <slot name="nav" class="peer-checked/burger:hidden"></slot>
+        <label for="toggle" class="md:hidden">
+            <svg class="burger-menu select-none w-8 h-8 cursor-pointer duration-150 hover:fill-green-500"
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
+            </svg>
+        </label>
     </header>
 </div>

@@ -3,22 +3,26 @@
 		{
 			"blg-name": "this is blog name",
 			"blog-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, eos? Quo, vero.",
-			"blog-data": "12 jan 2021"
+			"blog-data": "12 jan 2021",
+			"img-src": ""
 		},
 		{
 			"blg-name": "this is blog name",
 			"blog-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, eos? Quo, vero.",
-			"blog-data": "17 mar 2019"
+			"blog-data": "17 mar 2019",
+			"img-src": ""
 		},
 		{
 			"blg-name": "this is blog name",
 			"blog-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, eos? Quo, vero.",
-			"blog-data": "10 oct 2020"
+			"blog-data": "10 oct 2020",
+			"img-src": ""
 		},
 		{
 			"blg-name": "this is blog name",
 			"blog-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, eos? Quo, vero.",
-			"blog-data": "09 nov 2022"
+			"blog-data": "09 nov 2022",
+			"img-src": ""
 		}
 	]
 }

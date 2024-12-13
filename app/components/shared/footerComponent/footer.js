@@ -1,4 +1,4 @@
-// import { companyInfo } from "../../../app/g/lobal/info.js";
+import { companyInfo } from "../../../global/info.js";
 export default class FooterComponent extends HTMLElement {
 	styleSheetPath = "./app/styles/output.css";
 	templatePath = "./app/components/shared/footerComponent/footer.html";
@@ -14,7 +14,6 @@ export default class FooterComponent extends HTMLElement {
 				${await this.renderView()}`;
 		const year = this.shadowRoot.querySelector("#currentYear");
 		year.textContent = this.currentYear;
-		// console.log(this.companyInfo)
 	}
 	async renderView() {
 		try {
@@ -26,16 +25,26 @@ export default class FooterComponent extends HTMLElement {
 			console.error(`Error: ${error}`);
 		}
 	}
-// 	injectData(template, data) {
-// 		const regex = /{{(.*?)}}/g;
-// 		template.replace(regex, (key) => 'something');
-// 		console.log(template)
-// 		console.log(template.match(regex))
-// // template.replace(regex, (match, key) => 'Future land');
-// 		// return template.replace(regex, (match, key) => data[key.trim()]);
-// 	}
+	// injectData(template, data) {
+	// 	const regex = /{{( +)?\w+(.\w+)?( +)?}}/g;
+	// 	const interPolation = Array.from(template.match(regex));
+	// 	interPolation.forEach((e) => {
+	// 		const val = `'${e
+	// 			.slice(2, e.length - 2)
+	// 			.trim()
+	// 			.split(".")
+	// 			.join("']['")}'`;
+	// 		console.log(`[${val}]`);
+	// 		// e.slice(2, e.length - 2);
+	// 		// data[(e.slice(2, e.length - 2)).trim()];
+	// 	});
+	// 	console.log(data);
+	// 	// template.replace(regex, (key) => 'something');
+	// 	// template.match(regex)
+	// 	// template.replace(regex, (match, key) => 'Future land');
+	// 	// return template.replace(regex, (match, key) => data[key.trim()]);
+	// }
 }
-
 
 // Register the custom element
 customElements.define("footer-component", FooterComponent);

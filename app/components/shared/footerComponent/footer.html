@@ -21,7 +21,7 @@
                     <span class="flex-1 border-b-2 block border-gray-300 mx-6"></span>
                 </div>
                 <p class="text-gray-400">
-                    Your company description goes here. Make it brief but informative.
+                    {{description}}
                 </p>
             </div>
 
@@ -78,9 +78,9 @@
 
                 </div>
                 <ul class="space-y-2 text-gray-400">
-                    <li>Email:<a mailto="info@example.com">info@example.com</a></li>
-                    <li>Phone: (123) 456-7890</li>
-                    <li>Address: 123 Street Name, City, Country</li>
+                    <li>Email:<a mailto="{{contact.email}}">{{contacts.email    }}</a></li>
+                    <li>Phone: {{ contacts.phone     }}</li>
+                    <li>Address: {{address.street    }}, {{   address.city}}, {{address.country}}</li>
                 </ul>
             </div>
 
@@ -98,8 +98,7 @@
                                 class="bg-gray-100 text-Dark border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-Dark transition ease-in-out duration-150"
                                 placeholder="Enter your email address" />
 
-                            <button
-                                class="btn-dark">
+                            <button class="btn-dark">
                                 Subscribe
                             </button>
                         </form>
@@ -115,7 +114,7 @@
 
         <!-- Bottom Bar -->
         <div class=" py-3 border-t border-Dark text-center text-Dark">
-            <p>&copy; <time id="currentYear"></time> {{companyName}}. All rights reserved.</p>
+            <p>&copy; <time id="currentYear"></time> {{name}}. All rights reserved.</p>
         </div>
     </div>
 </footer>
