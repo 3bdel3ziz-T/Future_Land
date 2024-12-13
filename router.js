@@ -19,33 +19,39 @@ export default class Router {
 			}
 		});
 	}
-
-	handleLocation(path, pushState = true) {
-		const pagePath = this.routes.find((route) => route.path === path);
-		if (pagePath !== undefined) {
-			if (pushState) {
-				history.pushState(null, null, path);
-			}
-			this.loadComponent(pagePath.component);
-		}
+	getMatch(href) {
+		return new Promise((resolve, reject) => {
+			const component = this.routes.find((route) => route.href === href);
+			if (component !== undefined) resolve(component);
+			else reject();
+		});
 	}
 
-	async loadComponent(componentPath) {
+	async handleLocation(href, pushState = true) {
+		await this.getMatch(href)
+			.then((component) => {
+				if (pushState) history.pushState(null, null, href);
+				this.loadComponent(component.path, component.selector);
+			})
+			.catch((error) => {
+				//to handle if the href doesn't match any of the routes array
+				this.getMatch("/404").then((p404Component) => {
+					if (pushState) history.pushState(null, null, p404Component.href);
+					this.loadComponent(p404Component.path, p404Component.selector);
+				});
+			});
+	}
+	async loadComponent(componentPath, componentSelector) {
 		const app = document.querySelector(this.appElSelector);
 		try {
-			const response = await fetch(componentPath);
-			if (response.status === 200 && response.ok) {
-				const html = await response.text();
-				app.innerHTML = html;
-			} else {
-				const response = await fetch(
-					this.routes.find((route) => route.path === "404").component
-				);
-				const html = await response.text();
-				app.innerHTML = html;
-			}
+			import(componentPath).then(() => {
+				app.innerHTML = `<${componentSelector}></"${componentSelector}">`;
+			});
 		} catch (error) {
-			console.error(`Error: ${error}`);
+			//to handle if the component file(s) doesn't exist
+			import(componentPath).then(() => {
+				app.innerHTML = `<${componentSelector}></"${componentSelector}">`;
+			});
 		}
 	}
 }

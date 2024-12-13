@@ -1,6 +1,6 @@
-export default class ContactComponent extends HTMLElement {
+export default class p404Component extends HTMLElement {
 	styleSheetPath = "./app/styles/output.css";
-	templatePath = "./app/components/sections/contactComponent/contact.html";
+	templatePath = "./app/components/shared/404Component/404.html";
 	constructor() {
 		super();
 		this.attachShadow({ mode: "open" });
@@ -22,4 +22,4 @@ export default class ContactComponent extends HTMLElement {
 }
 
 // Register the custom element
-customElements.define("contact-component", ContactComponent);
+customElements.define("p404-component", p404Component);

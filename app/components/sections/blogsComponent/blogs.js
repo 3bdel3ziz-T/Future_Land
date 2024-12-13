@@ -1,8 +1,8 @@
 import "../../shared/headingComponent/heading.js";
-// import "./blogItemComponent/blogItem.js";
 export default class BlogsComponent extends HTMLElement {
 	styleSheetPath = "./app/styles/output.css";
 	templatePath = "./app/components/sections/blogsComponent/blogs.html";
+	blogsPath = "./app/assets/data/blogs.json";
 	constructor() {
 		super();
 		this.attachShadow({ mode: "open" });
@@ -12,12 +12,21 @@ export default class BlogsComponent extends HTMLElement {
 		this.shadowRoot.innerHTML = `
     <link rel="stylesheet" href="${this.styleSheetPath}">
   ${await this.renderView()}`;
+		// console.log(await this.getBlogs())
 	}
 	async renderView() {
 		try {
 			const response = await fetch(`${this.templatePath}`);
-			const template = await response.text();
-			return template;
+			return await response.text();
+		} catch (error) {
+			console.error(`Error: ${error}`);
+		}
+	}
+	async getBlogs() {
+		try {
+			const response = await fetch(`${this.blogsPath}`);
+			const blog = await response.text();
+			return blog;
 		} catch (error) {
 			console.error(`Error: ${error}`);
 		}
@@ -25,4 +34,4 @@ export default class BlogsComponent extends HTMLElement {
 }
 
 // Register the custom element
-customElements.define("card-component", BlogsComponent);
+customElements.define("blogs-component", BlogsComponent);

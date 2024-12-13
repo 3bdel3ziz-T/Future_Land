@@ -1,26 +1,27 @@
-import '../../shared/headingComponent/heading.js';   
+import "../../shared/headingComponent/heading.js";
+import "../../shared/cardComponent/card.js";
 export default class HomeComponent extends HTMLElement {
-    selector = 'home-component';
-    // template;
-    // exploreButton;
-    constructor() {
-        console.log('home');
-        super();
-    }
-    
-    async connectedCallback() {
-        await this.render();
-    }
-    async render() {
-        try {
-            const response = await fetch('./app/components/sections/homeComponent/home.html');
-            const template = await response.text();
-            this.innerHTML = template;
-            console.log(template);
-        } catch (error) {
-            console.error('Error loading header template:', error);
-        }
-    }}
+	styleSheetPath = "./app/styles/output.css";
+	templatePath = "./app/components/sections/homeComponent/home.html";
+	constructor() {
+		super();
+		this.attachShadow({ mode: "open" });
+	}
+
+	async connectedCallback() {
+		this.shadowRoot.innerHTML = `
+    <link rel="stylesheet" href="${this.styleSheetPath}">
+  ${await this.renderView()}`;
+	}
+	async renderView() {
+		try {
+			const response = await fetch(`${this.templatePath}`);
+			return await response.text();
+		} catch (error) {
+			console.error("Error loading header template:", error);
+		}
+	}
+}
 
 // Register the custom element
-window.customElements.define('home-component', HomeComponent);
+window.customElements.define("home-component", HomeComponent);
