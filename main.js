@@ -1,6 +1,8 @@
 import "./app/components/shared/headerComponent/header.js";
 import "./app/components/shared/footerComponent/footer.js";
 import "./app/components/shared/loadingComponent/loading.js";
+import "./app/components/shared/upComponent/up.js";
+import "./app/components/shared/chatComponent/chat.js";
 import Router from "./router.js";
 class App {
 	routes = [

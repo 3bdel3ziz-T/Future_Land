@@ -33,22 +33,46 @@
           </p>
         </div>
       </div>
-      <div class=" bg-white shadow-md rounded-lg p-6 space-y-6">
-        <div class="grid grid-cols-2 gap-4">
-          <input type="text" placeholder="First name" class="border rounded-lg px-4 py-2 w-full" />
-          <input type="text" placeholder="Last name" class="border rounded-lg px-4 py-2 w-full" />
-        </div>
-        <input type="email" placeholder="Email" class="border rounded-lg px-4 py-2 w-full" />
-        <div class="grid grid-cols-2 gap-4">
-          <select class="border rounded-lg px-4 py-2 w-full">
-            <option value="US">US</option>
-            <option value="UK">UK</option>
-            <option value="AU">AU</option>
-          </select>
-          <input type="text" placeholder="+1 (555) 000-0000" class="border rounded-lg px-4 py-2 w-full" />
-        </div>
-        <textarea placeholder="Leave us a message..." rows="4" class="border rounded-lg px-4 py-2 w-full"></textarea>
-        <button class="btn-dark w-full">
+      <div
+        class="grid gap-5 sm:gap-6 grid-cols-1 w-full xs:w-fit xs:grid-cols-2 bg-white shadow-md rounded-lg p-6 space-6">
+        <label for="first_name" class="relative">
+          <input type="text" id="first_name" placeholder="First name"
+            class=" peer/firstname border rounded-lg px-4 py-2 w-full hover:invalid-field " />
+          <p class="absolute top-full opacity-0 duration-100 peer-hover/firstname:opacity-100 text-pink-600 text-xs">
+            only use letters, at least 4 characters.
+          </p>
+        </label>
+        <label for="last_name" class="relative">
+          <input type="text" id="last_name" placeholder="Last name"
+            class="peer/lastname border rounded-lg px-4 py-2 w-full hover:invalid-field" />
+          <p class="absolute top-full opacity-0 duration-100 peer-hover/lastname:opacity-100 text-pink-600 text-xs">
+            only use letters at least 4 characters.
+          </p>
+        </label>
+        <label for="email" class="relative xs:col-span-2">
+          <input type="email" id="email" placeholder="Email" class="peer/email border rounded-lg px-4 py-2 w-full hover:invalid-field" />
+          <p class="absolute top-full opacity-0 duration-100 peer-hover/email:opacity-100 text-pink-600 text-xs">
+            Please provide a valid email address. </p>
+        </label>
+        <select class="border rounded-lg px-4 py-2 w-full hover:invalid-field">
+          <option value="US">US</option>
+          <option value="UK">UK</option>
+          <option value="AU">AU</option>
+        </select>
+        <label for="phone" class="relative">
+        <input type="text" id="phone" placeholder="+1 (555) 000-0000" class="border rounded-lg px-4 py-2 w-full hover:invalid-field peer/phone" />
+        <p class="absolute top-full opacity-0 duration-100 peer-hover/phone:opacity-100 text-pink-600 text-xs">
+          only use letters, at least 4 characters.
+        </p>
+      </label>
+        <label for="textarea" class="relative xs:col-span-2">
+          <textarea placeholder="Leave us a message..." id="textarea" rows="4"
+            class="peer/textarea border rounded-lg px-4 py-2 w-full hover:invalid-field"></textarea>
+          <p class="absolute top-full opacity-0 duration-100 peer-hover/textarea:opacity-100 text-pink-600 text-xs">
+            only use letters, at least 4 characters.
+          </p>
+        </label>
+        <button class="btn-dark w-full xs:col-span-2">
           Send message
         </button>
       </div>

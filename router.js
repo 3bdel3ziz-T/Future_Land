@@ -26,19 +26,23 @@ export default class Router {
 			const component = this.routes.find((route) => route.href === href);
 			if (typeof component === "object" && Object.keys(component).length > 0) {
 				resolve(component);
-				this.routes.forEach((route) => {
-					route.isLinkActive = false;
-					if (component.path === route.path) route.isLinkActive = true;
-				});
-				this.navLinksArr.forEach((link) => {
-					link.classList.remove("active");
-					if (
-						component.href === link.getAttribute("href") &&
-						component.isLinkActive
-					)
-						link.classList.add("active");
-				});
+				this.changeTheActiveLink(component);
 			} else reject();
+		});
+	}
+
+	changeTheActiveLink(component) {
+		this.routes.forEach((route) => {
+			route.isLinkActive = false;
+			if (component.path === route.path) route.isLinkActive = true;
+		});
+		this.navLinksArr.forEach((link) => {
+			link.classList.remove("active");
+			if (
+				component.href === link.getAttribute("href") &&
+				component.isLinkActive
+			)
+				link.classList.add("active");
 		});
 	}
 

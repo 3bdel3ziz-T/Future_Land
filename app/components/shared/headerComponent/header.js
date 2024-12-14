@@ -21,12 +21,6 @@ export default class HeaderComponent extends HTMLElement {
 			}
 		});
 	}
-	// linkActiveState(template) {
-	// 	// const links = Array.from(template.querySelectorAll('nav-link'))
-	// 	const slot = template.querySelector('slot[name=nav]');
-	// 	const slotContent = slot.children
-	// 	console.log(slot,slotContent)
-	// }
 	async renderView() {
 		try {
 			const response = await fetch(`${this.templatePath}`);

@@ -13,6 +13,9 @@
 }
 
 @layer components {
+	.invalid-field {
+		@apply border border-red-500 border-solid animate-invalid_field;
+	}
 	.btn-dark {
 		@apply bg-Dark text-white rounded-md p-2 hover:bg-transparent hover:text-Dark border-2 hover:border-Dark font-medium transition ease-in-out duration-150;
 	}
@@ -91,28 +94,33 @@ body {
 
 /* Media Queries */
 /* Mobile devices */
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
 	.custom-container {
 		padding: 0 15px;
 	}
 }
 
 /* Tablets */
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
 	.custom-container {
-		padding: 0 25px;
+		padding: 0 35px;
 	}
 }
 
 /* Small laptops */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
 	.custom-container {
-		padding: 0 60px;
+		padding: 0 65px;
+	}
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+	.custom-container {
+		padding: 0 75px;
 	}
 }
 
 /* Large screens */
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1200px) {
 	.custom-container {
 		max-width: 1200px;
 	}
