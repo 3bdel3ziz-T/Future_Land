@@ -10,6 +10,23 @@ export default class ContactComponent extends HTMLElement {
 		this.shadowRoot.innerHTML = `
     <link rel="stylesheet" href="${this.styleSheetPath}">
   ${await this.renderView()}`;
+		const form = Array.from(
+			this.shadowRoot.querySelectorAll("form label input")
+		);
+		const [firstName, lastName, email, phone, textarea] = form;
+
+		// this.checkFormValidation(firstName, lastName, email, phone, textarea);
+		// 	Array.from(this.shadowRoot.querySelectorAll("form label input"));
+	}
+	regexCheck(input, regex) {
+		if (input.value.match(regex)) {
+			input.classList.remove("invalid-field");
+		} else {
+			input.classList.add("invalid-field");
+			const wrongMessageEl = input.nextElementSibling;
+			wrongMessageEl.classList.add("opacity-100");
+			wrongMessageEl.textContent = `Please enter a valid ${input.placeholder}`;
+		}
 	}
 	async renderView() {
 		try {

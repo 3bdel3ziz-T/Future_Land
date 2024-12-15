@@ -23,7 +23,7 @@
 		@apply absolute rounded-2xl bg-Dark left-3 top-2 h-4;
 	}
 	.link {
-		@apply overflow-hidden after:duration-200 duration-300 bg-Sky md:bg-transparent text-Dark;
+		@apply overflow-hidden after:duration-200 duration-300 bg-transparent hover:bg-Sky md:hover:bg-transparent md:bg-transparent text-Dark;
 	}
 	.link:hover,
 	.active {
@@ -44,6 +44,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	outline: none;
 }
 
 body {
