@@ -30,9 +30,9 @@ module.exports = {
 				Sky: "#F0F5FA",
 			},
 		},
-		// fontFamily: {
-		// 	alumni: ["Alumni Sans"],
-		// },
+		fontFamily: {
+			alumni: ["Alumni Sans"],
+		},
 	},
 	plugins: [],
 };

@@ -1,28 +1,30 @@
-{
-	"blogs": [
-		{
-			"blg-name": "this is blog name",
-			"blog-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, eos? Quo, vero.",
-			"blog-data": "12 jan 2021",
-			"img-src": ""
-		},
-		{
-			"blg-name": "this is blog name",
-			"blog-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, eos? Quo, vero.",
-			"blog-data": "17 mar 2019",
-			"img-src": ""
-		},
-		{
-			"blg-name": "this is blog name",
-			"blog-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, eos? Quo, vero.",
-			"blog-data": "10 oct 2020",
-			"img-src": ""
-		},
-		{
-			"blg-name": "this is blog name",
-			"blog-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, eos? Quo, vero.",
-			"blog-data": "09 nov 2022",
-			"img-src": ""
-		}
-	]
-}
+[
+	{
+		"name": "this is blog name",
+		"title": "this is blog title",
+		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, eos? Quo, vero.",
+		"date": "12 jan 2021",
+		"img_src": ""
+	},
+	{
+		"name": "this is blog name",
+		"title": "this is blog title",
+		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, eos? Quo, vero.",
+		"date": "17 mar 2019",
+		"img_src": ""
+	},
+	{
+		"name": "this is blog name",
+		"title": "this is blog title",
+		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, eos? Quo, vero.",
+		"date": "10 oct 2020",
+		"img_src": ""
+	},
+	{
+		"name": "this is blog name",
+		"title": "this is blog title",
+		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, eos? Quo, vero.",
+		"date": "09 nov 2022",
+		"img_src": ""
+	}
+]
