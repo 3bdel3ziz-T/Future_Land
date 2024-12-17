@@ -1,4 +1,6 @@
 import "../../shared/headingComponent/heading.js";
+import { renderView } from "../../../core/renderView.js";
+
 export default class aboutComponent extends HTMLElement {
 	styleSheetPath = "./app/styles/output.css";
 	templatePath = "./app/components/sections/aboutComponent/about.html";
@@ -10,15 +12,7 @@ export default class aboutComponent extends HTMLElement {
 	async connectedCallback() {
 		this.shadowRoot.innerHTML = `
     <link rel="stylesheet" href="${this.styleSheetPath}">
-  ${await this.renderView()}`;
-	}
-	async renderView() {
-		try {
-			const response = await fetch(`${this.templatePath}`);
-			return await response.text();
-		} catch (error) {
-			console.error("Error loading header template:", error);
-		}
+  ${await renderView(this.templatePath)}`;
 	}
 }
 

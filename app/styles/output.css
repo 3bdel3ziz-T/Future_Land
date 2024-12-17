@@ -690,6 +690,10 @@ video {
   inset: 0px;
 }
 
+.bottom-0{
+  bottom: 0px;
+}
+
 .bottom-12{
   bottom: 3rem;
 }
@@ -722,16 +726,12 @@ video {
   top: 100%;
 }
 
-.bottom-0{
-  bottom: 0px;
-}
-
 .z-10{
   z-index: 10;
 }
 
-.z-40{
-  z-index: 40;
+.z-20{
+  z-index: 20;
 }
 
 .z-50{
@@ -740,42 +740,6 @@ video {
 
 .z-\[-1\]{
   z-index: -1;
-}
-
-.z-20{
-  z-index: 20;
-}
-
-.z-\[5\]{
-  z-index: 5;
-}
-
-.z-\[6\]{
-  z-index: 6;
-}
-
-.z-\[4\]{
-  z-index: 4;
-}
-
-.z-\[15\]{
-  z-index: 15;
-}
-
-.z-\[\]{
-  z-index: ;
-}
-
-.z-\[20\]{
-  z-index: 20;
-}
-
-.z-30{
-  z-index: 30;
-}
-
-.z-0{
-  z-index: 0;
 }
 
 .mx-6{
@@ -933,42 +897,6 @@ video {
   height: 100%;
 }
 
-.h-\[12\]{
-  height: 12;
-}
-
-.h-\[12px\]{
-  height: 12px;
-}
-
-.h-\[3rem\]{
-  height: 3rem;
-}
-
-.h-\[9rem\]{
-  height: 9rem;
-}
-
-.h-16{
-  height: 4rem;
-}
-
-.h-36{
-  height: 9rem;
-}
-
-.h-\[\]{
-  height: ;
-}
-
-.h-\[9\]{
-  height: 9;
-}
-
-.h-\[11\.25rem\]{
-  height: 11.25rem;
-}
-
 .w-0{
   width: 0px;
 }
@@ -1075,31 +1003,6 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.translate-y-full{
-  --tw-translate-y: 100%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.translate-x-1{
-  --tw-translate-x: 0.25rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.-translate-x-1{
-  --tw-translate-x: -0.25rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.-translate-x-\[2px\]{
-  --tw-translate-x: -2px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.-translate-x-\[1px\]{
-  --tw-translate-x: -1px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .-rotate-\[35deg\]{
   --tw-rotate: -35deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1149,6 +1052,20 @@ video {
 
 .animate-spin{
   animation: spin 1s linear infinite;
+}
+
+@keyframes blurBG{
+  0%,100%{
+    filter: blur(2px);
+  }
+
+  50%{
+    filter: blur(8px);
+  }
+}
+
+.animate-blur_BG{
+  animation: blurBG 450ms ease-in-out 0s infinite;
 }
 
 .cursor-pointer{
@@ -1359,11 +1276,6 @@ video {
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-
-.bg-black{
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
 }
 
 .bg-opacity-20{
@@ -1616,6 +1528,15 @@ video {
 .outline-none{
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.blur{
+  --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.filter{
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .backdrop-blur-lg{
@@ -1933,78 +1854,8 @@ body {
   display: none;
 }
 
-.peer\/chat:checked ~ .peer-checked\/chat\:translate-y-\[200\%\]{
-  --tw-translate-y: 200%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.peer\/chat:checked ~ .peer-checked\/chat\:translate-y-\[-200\%\]{
-  --tw-translate-y: -200%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.peer\/chat:checked ~ .peer-checked\/chat\:translate-y-full{
-  --tw-translate-y: 100%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.peer\/chat:checked ~ .peer-checked\/chat\:-translate-y-full{
-  --tw-translate-y: -100%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.peer:checked ~ .peer-checked\:-translate-y-full{
-  --tw-translate-y: -100%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.peer\/chat:checked ~ .peer-checked\/chat\:-translate-y-\[200\]{
-  --tw-translate-y: -200;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.peer\/chat:checked ~ .peer-checked\/chat\:-translate-y-\[200\%\]{
-  --tw-translate-y: -200%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.peer\/chat:checked ~ .peer-checked\/chat\:-translate-y-\[204\%\]{
-  --tw-translate-y: -204%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.peer\/chat:checked ~ .peer-checked\/chat\:-translate-y-\[102\]{
-  --tw-translate-y: -102;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.peer\/chat:checked ~ .peer-checked\/chat\:-translate-y-\[102\%\]{
-  --tw-translate-y: -102%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.peer\/chat:checked ~ .peer-checked\/chat\:-translate-y-\[206\%\]{
-  --tw-translate-y: -206%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.peer\/chat:checked ~ .peer-checked\/chat\:-translate-y-\[103\%\]{
-  --tw-translate-y: -103%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.peer\/chat:checked ~ .peer-checked\/chat\:-translate-y-\[2010\%\]{
-  --tw-translate-y: -2010%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.peer\/chat:checked ~ .peer-checked\/chat\:-translate-y-\[105\%\]{
-  --tw-translate-y: -105%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.peer\/chat:checked ~ .peer-checked\/chat\:-translate-y-\[210\%\]{
-  --tw-translate-y: -210%;
+.peer\/chat:checked ~ .peer-checked\/chat\:-translate-y-\[110\%\]{
+  --tw-translate-y: -110%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -2013,20 +1864,10 @@ body {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.peer\/chat:checked ~ .peer-checked\/chat\:-translate-y-\[110\%\]{
-  --tw-translate-y: -110%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .peer\/chat:checked ~ .peer-checked\/chat\:shadow-\[0_0_0_100rem_rgba\(0\2c 0\2c 0\2c 0\.2\)\]{
   --tw-shadow: 0 0 0 100rem rgba(0,0,0,0.2);
   --tw-shadow-colored: 0 0 0 100rem var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.peer\/chat:hover ~ .peer-hover\/chat\:translate-y-\[-200\%\]{
-  --tw-translate-y: -200%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 @media (min-width: 530px){

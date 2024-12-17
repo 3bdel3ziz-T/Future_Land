@@ -1,3 +1,4 @@
+import { renderView } from "../../../core/renderView.js";
 export default class CardComponent extends HTMLElement {
 	styleSheetPath = "./app/styles/output.css";
 	templatePath = "./app/components/shared/cardComponent/card.html";
@@ -9,17 +10,24 @@ export default class CardComponent extends HTMLElement {
 	async connectedCallback() {
 		this.shadowRoot.innerHTML = `
     <link rel="stylesheet" href="${this.styleSheetPath}">
-  ${await this.renderView()}`;
-		const imgPath = this.getAttribute("imgPath");
-		this.shadowRoot.querySelector("img").src = imgPath;
+  ${await renderView(this.templatePath)}`;
+		const loadingImgPath = this.getAttribute("loadingImgPath");
+		const img = this.shadowRoot.querySelector("img");
+		this.pendingImages(img, loadingImgPath).then(() => {
+			const imgPath = this.getAttribute("imgPath");
+			img.src = imgPath;
+		});
 	}
-	async renderView() {
-		try {
-			const response = await fetch(`${this.templatePath}`);
-			return await response.text();
-		} catch (error) {
-			console.error(`Error: ${error}`);
-		}
+	pendingImages(element, loadingImgPath) {
+		return new Promise((resolve) => {
+			element.style.cssText = `
+			background-image: url(${loadingImgPath});
+			background-repeat: no-repeat;
+			background-size: cover;
+			filter: blur(6px);
+			`;
+			resolve();
+		});
 	}
 }
 

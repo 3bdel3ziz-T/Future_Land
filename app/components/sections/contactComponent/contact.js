@@ -1,3 +1,5 @@
+import { renderView } from "../../../core/renderView.js";
+
 export default class ContactComponent extends HTMLElement {
 	styleSheetPath = "./app/styles/output.css";
 	templatePath = "./app/components/sections/contactComponent/contact.html";
@@ -9,7 +11,7 @@ export default class ContactComponent extends HTMLElement {
 	async connectedCallback() {
 		this.shadowRoot.innerHTML = `
     <link rel="stylesheet" href="${this.styleSheetPath}">
-  ${await this.renderView()}`;
+  ${await renderView(this.templatePath)}`;
 		const form = Array.from(
 			this.shadowRoot.querySelectorAll("form label input")
 		);
@@ -26,14 +28,6 @@ export default class ContactComponent extends HTMLElement {
 			const wrongMessageEl = input.nextElementSibling;
 			wrongMessageEl.classList.add("opacity-100");
 			wrongMessageEl.textContent = `Please enter a valid ${input.placeholder}`;
-		}
-	}
-	async renderView() {
-		try {
-			const response = await fetch(`${this.templatePath}`);
-			return await response.text();
-		} catch (error) {
-			console.error(`Error: ${error}`);
 		}
 	}
 }

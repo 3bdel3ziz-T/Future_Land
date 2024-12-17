@@ -1,3 +1,4 @@
+import { renderView } from "../../../core/renderView.js";
 export default class p404Component extends HTMLElement {
 	styleSheetPath = "./app/styles/output.css";
 	templatePath = "./app/components/shared/404Component/404.html";
@@ -9,15 +10,7 @@ export default class p404Component extends HTMLElement {
 	async connectedCallback() {
 		this.shadowRoot.innerHTML = `
     <link rel="stylesheet" href="${this.styleSheetPath}">
-  ${await this.renderView()}`;
-	}
-	async renderView() {
-		try {
-			const response = await fetch(`${this.templatePath}`);
-			return await response.text();
-		} catch (error) {
-			console.error(`Error: ${error}`);
-		}
+  ${await renderView(this.templatePath)}`;
 	}
 }
 

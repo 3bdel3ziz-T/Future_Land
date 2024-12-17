@@ -1,3 +1,5 @@
+import { renderView } from "../../../core/renderView.js";
+
 export default class HeaderComponent extends HTMLElement {
 	styleSheetPath = "./app/styles/output.css";
 	templatePath = "./app/components/shared/headerComponent/header.html";
@@ -9,7 +11,7 @@ export default class HeaderComponent extends HTMLElement {
 	async connectedCallback() {
 		this.shadowRoot.innerHTML = `
 		<link rel="stylesheet" href="${this.styleSheetPath}">
-		${await this.renderView()}`;
+		${await renderView(this.templatePath)}`;
 		// this.linkActiveState(this.shadowRoot)
 		window.addEventListener("resize", () => {
 			if (window.innerWidth < 768) {
@@ -20,15 +22,6 @@ export default class HeaderComponent extends HTMLElement {
 				burger.checked = false;
 			}
 		});
-	}
-	async renderView() {
-		try {
-			const response = await fetch(`${this.templatePath}`);
-			const template = await response.text();
-			return template;
-		} catch (error) {
-			console.error(`Error: ${error}`);
-		}
 	}
 }
 

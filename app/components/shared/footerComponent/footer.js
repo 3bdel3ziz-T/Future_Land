@@ -1,4 +1,6 @@
 import { companyInfo } from "../../../global/info.js";
+import { renderView } from "../../../core/renderView.js";
+
 export default class FooterComponent extends HTMLElement {
 	styleSheetPath = "./app/styles/output.css";
 	templatePath = "./app/components/shared/footerComponent/footer.html";
@@ -11,19 +13,9 @@ export default class FooterComponent extends HTMLElement {
 	async connectedCallback() {
 		this.shadowRoot.innerHTML = `
 				<link rel="stylesheet" href="${this.styleSheetPath}">
-				${await this.renderView()}`;
+				${await renderView(this.templatePath)}`;
 		const year = this.shadowRoot.querySelector("#currentYear");
 		year.textContent = this.currentYear;
-	}
-	async renderView() {
-		try {
-			const response = await fetch(`${this.templatePath}`);
-			const template = await response.text();
-			// this.injectData(template, companyInfo);
-			return template;
-		} catch (error) {
-			console.error(`Error: ${error}`);
-		}
 	}
 	// injectData(template, data) {
 	// 	const regex = /{{( +)?\w+(.\w+)?( +)?}}/g;

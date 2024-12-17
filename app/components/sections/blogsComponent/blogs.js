@@ -1,4 +1,6 @@
 import "../../shared/headingComponent/heading.js";
+import { renderView } from "../../../core/renderView.js";
+
 export default class BlogsComponent extends HTMLElement {
 	styleSheetPath = "./app/styles/output.css";
 	templatePath = "./app/components/sections/blogsComponent/blogs.html";
@@ -12,17 +14,9 @@ export default class BlogsComponent extends HTMLElement {
 	async connectedCallback() {
 		this.shadowRoot.innerHTML = `
     <link rel="stylesheet" href="${this.styleSheetPath}">
-  ${await this.renderView()}`;
+  ${await renderView(this.templatePath)}`;
 		this.renderBlogs(this.shadowRoot);
 		// console.log(await this.getBlogs());
-	}
-	async renderView() {
-		try {
-			const response = await fetch(`${this.templatePath}`);
-			return await response.text();
-		} catch (error) {
-			console.error(`Error: ${error}`);
-		}
 	}
 	async renderBlogs(template) {
 		const blogs = JSON.parse(await this.getBlogs());
@@ -30,7 +24,7 @@ export default class BlogsComponent extends HTMLElement {
 		for (let item of blogs) {
 			const blogItemTemplate = `
 				<div class="flex gap-4">
-				<img src="${item.img_src}" alt="Article Image" class="rounded-lg w-28 h-28 object-cover">
+				<img src="${item.img_src}" alt="Article Image" class="rounded-lg w-28 h-28 loading="lazy" object-cover">
 				<div>
 					<p class="text-sm text-gray-600">Lana Steiner • ${item.date}</p>
 					<h3 class="text-lg font-semibold mt-1">${item.title}</h3>

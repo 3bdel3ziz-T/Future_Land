@@ -1,3 +1,5 @@
+import { renderView } from "../../../core/renderView.js";
+
 export default class LoadingComponent extends HTMLElement {
 	styleSheetPath = "./app/styles/output.css";
 	templatePath = "./app/components/shared/loadingComponent/loading.html";
@@ -11,16 +13,8 @@ export default class LoadingComponent extends HTMLElement {
       <link rel="stylesheet" href="${this.styleSheetPath}">
       <div 
       class='${this.dataset.loading_state != "true" ? "hidden" : false}'>
-        ${await this.renderView()}
+        ${await renderView(this.templatePath)}
         </div>`;
-	}
-	async renderView() {
-		try {
-			const response = await fetch(`${this.templatePath}`);
-			return await response.text();
-		} catch (error) {
-			console.error(`Error: ${error}`);
-		}
 	}
 }
 

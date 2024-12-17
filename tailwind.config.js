@@ -9,6 +9,7 @@ module.exports = {
 		extend: {
 			animation: {
 				invalid_field: "invalid 450ms ease-in-out 0s 1",
+				blur_BG: "blurBG 450ms ease-in-out 0s infinite",
 			},
 			keyframes: {
 				invalid: {
@@ -18,6 +19,10 @@ module.exports = {
 					"70%": { transform: "translateX(3px)" },
 					"80%": { transform: "translateX(-3px)" },
 					"100%": { transform: "translateX(0px)" },
+				},
+				blurBG: {
+					"0%,100%": { filter: "blur(2px)" },
+					"50%": { filter: "blur(8px)" },
 				},
 			},
 			screens: {
