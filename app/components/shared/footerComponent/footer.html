@@ -22,10 +22,6 @@
                 </div>
                 <p class="text-gray-400">
                     {{description}}
-                    {{name}}
-                    {{name}}
-                    {{name}}
-                    {{name}}
                 </p>
             </div>
 
@@ -83,7 +79,7 @@
                 </div>
                 <ul class="space-y-2 text-gray-400">
                     <li>Email:<a mailto=" {{contact.email}} ">{{contacts.email }}</a></li>
-                    <li>Phone: {{ contacts.phone }}</li>
+                    <li>Phone:{{ contacts.countryCode}} {{ contacts.phone }}</li>
                     <li>Address: {{address.street }}, {{ address.city}}, {{address.country}}</li>
                 </ul>
             </div>

@@ -8,9 +8,9 @@ const companyInfo = {
 		zip: "10001",
 	},
 	contacts: {
-		countryCode: "+1",
-		phone: "0123456789",
-		email: "futurelandfood@example.com",
+		countryCode: "+971",
+		phone: "50 962 2996",
+		email: "Info@futureslandfood.com",
 	},
 	working: {
 		timeFrom: "9am",

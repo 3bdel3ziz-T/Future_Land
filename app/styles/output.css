@@ -806,6 +806,10 @@ video {
   margin-top: 1.5rem;
 }
 
+.mt-8{
+  margin-top: 2rem;
+}
+
 .box-content{
   box-sizing: content-box;
 }
@@ -1052,20 +1056,6 @@ video {
 
 .animate-spin{
   animation: spin 1s linear infinite;
-}
-
-@keyframes blurBG{
-  0%,100%{
-    filter: blur(2px);
-  }
-
-  50%{
-    filter: blur(8px);
-  }
-}
-
-.animate-blur_BG{
-  animation: blurBG 450ms ease-in-out 0s infinite;
 }
 
 .cursor-pointer{
@@ -1335,6 +1325,10 @@ video {
   padding: 1.5rem;
 }
 
+.p-5{
+  padding: 1.25rem;
+}
+
 .px-2{
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -1457,6 +1451,10 @@ video {
 
 .font-semibold{
   font-weight: 600;
+}
+
+.font-normal{
+  font-weight: 400;
 }
 
 .text-Dark{
