@@ -1,5 +1,6 @@
 import { renderView } from "../../../core/renderView.js";
-
+import { injector } from "../../../core/dataInjector.js";
+import { companyInfo as info } from "../../../global/info.js";
 export default class ContactComponent extends HTMLElement {
 	styleSheetPath = "./app/styles/output.css";
 	templatePath = "./app/components/sections/contactComponent/contact.html";
@@ -11,11 +12,11 @@ export default class ContactComponent extends HTMLElement {
 	async connectedCallback() {
 		this.shadowRoot.innerHTML = `
     <link rel="stylesheet" href="${this.styleSheetPath}">
-  ${await renderView(this.templatePath)}`;
+  ${await injector(await renderView(this.templatePath), info)}`;
 		const form = Array.from(
 			this.shadowRoot.querySelectorAll("form label input")
 		);
-		const [firstName, lastName, email, phone, textarea] = form;
+		// const [firstName, lastName, email, phone, textarea] = form;
 
 		// this.checkFormValidation(firstName, lastName, email, phone, textarea);
 		// 	Array.from(this.shadowRoot.querySelectorAll("form label input"));

@@ -24,7 +24,7 @@ export default class CardComponent extends HTMLElement {
 			background-image: url(${loadingImgPath});
 			background-repeat: no-repeat;
 			background-size: cover;
-			filter: blur(6px);
+			backdrop-filter: blur(6px);
 			`;
 			resolve();
 		});

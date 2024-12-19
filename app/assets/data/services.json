@@ -1,0 +1,20 @@
+[
+	{
+		"id": "1",
+		"name": "Service 1",
+		"description": "Description 1",
+		"image": "https://via.placeholder.com/150"
+	},
+	{
+		"id": "2",
+		"name": "Service 2",
+		"description": "Description 2",
+		"image": "https://via.placeholder.com/150"
+	},
+	{
+		"id": "3",
+		"name": "Service 3",
+		"description": "Description 3",
+		"image": "https://via.placeholder.com/150"
+	}
+]

@@ -5,9 +5,10 @@
       <div class="contacts flex flex-row justify-between lg:justify-center lg:flex-col gap-6 flex-wrap">
         <div>
           <h2 class="text-xl font-semibold mb-2">Call us</h2>
-          <p>Call our team Mon-Fri from 8am to 5pm.</p>
+          <p>Call our team {{working.weekFrom}}-{{working.weekTo}} from {{working.timeFrom}} to {{working.timeTo}}.
+          </p>
           <p class="mt-2 flex items-center">
-            +1 (555) 000-0000
+            {{contacts.countryCode}} {{contacts.phone}}
           </p>
         </div>
         <div>
@@ -21,7 +22,7 @@
               Shoot us an email
             </li>
             <li class="flex items-center">
-              Message us on Twitter
+              Message us on WatsApp
             </li>
           </ul>
         </div>
@@ -29,7 +30,7 @@
           <h2 class="text-xl font-semibold mb-2">Visit us</h2>
           <p>Chat to us in person at our Melbourne HQ.</p>
           <p class="mt-2 flex items-center">
-            100 Smith Street, Collingwood VIC 3066
+            {{address.country}}, {{address.city}}, {{address.street}}
           </p>
         </div>
       </div>

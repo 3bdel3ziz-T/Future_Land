@@ -1,5 +1,6 @@
-import { companyInfo } from "../../../global/info.js";
+import { companyInfo as info } from "../../../global/info.js";
 import { renderView } from "../../../core/renderView.js";
+import { injector } from "../../../core/dataInjector.js";
 
 export default class FooterComponent extends HTMLElement {
 	styleSheetPath = "./app/styles/output.css";
@@ -13,29 +14,10 @@ export default class FooterComponent extends HTMLElement {
 	async connectedCallback() {
 		this.shadowRoot.innerHTML = `
 				<link rel="stylesheet" href="${this.styleSheetPath}">
-				${await renderView(this.templatePath)}`;
+				${await injector(await renderView(this.templatePath), info)} `;
 		const year = this.shadowRoot.querySelector("#currentYear");
 		year.textContent = this.currentYear;
 	}
-	// injectData(template, data) {
-	// 	const regex = /{{( +)?\w+(.\w+)?( +)?}}/g;
-	// 	const interPolation = Array.from(template.match(regex));
-	// 	interPolation.forEach((e) => {
-	// 		const val = `'${e
-	// 			.slice(2, e.length - 2)
-	// 			.trim()
-	// 			.split(".")
-	// 			.join("']['")}'`;
-	// 		console.log(`[${val}]`);
-	// 		// e.slice(2, e.length - 2);
-	// 		// data[(e.slice(2, e.length - 2)).trim()];
-	// 	});
-	// 	console.log(data);
-	// 	// template.replace(regex, (key) => 'something');
-	// 	// template.match(regex)
-	// 	// template.replace(regex, (match, key) => 'Future land');
-	// 	// return template.replace(regex, (match, key) => data[key.trim()]);
-	// }
 }
 
 // Register the custom element

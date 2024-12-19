@@ -1,4 +1,4 @@
-export const companyInfo = {
+const companyInfo = {
 	name: "Future Land",
 	description: "This is my app",
 	address: {
@@ -8,7 +8,16 @@ export const companyInfo = {
 		zip: "10001",
 	},
 	contacts: {
+		countryCode: "+1",
 		phone: "0123456789",
-		email: "X0t2G@example.com",
+		email: "futurelandfood@example.com",
+	},
+	working: {
+		timeFrom: "9am",
+		timeTo: "6pm",
+		weekFrom: "mon",
+		weekTo: "wed",
 	},
 };
+
+export { companyInfo };
