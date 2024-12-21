@@ -2,7 +2,7 @@
     <div class="custom-container">
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 py-10">
             <!-- About Section -->
-            <div class="space-y-4">
+            <div class="space-y-4 text-gray-500">
 
                 <div class=" relative flex items-center">
                     <div class="marker -translate-x-7 w-12 -rotate-[65deg]">
@@ -20,10 +20,10 @@
                     </h3>
                     <span class="flex-1 border-b-2 block border-gray-300 mx-6"></span>
                 </div>
-                <p class="text-gray-400">
+                <p>
                     {{description}}
-                    <span class="block">Address: {{ address.country}}, {{address.state}}, {{address.place }}</span>
                 </p>
+                <div>Location: {{ address.country}}, {{address.state}}, {{address.place }}</div>
             </div>
             <!-- Contact Info -->
             <div class="space-y-4">

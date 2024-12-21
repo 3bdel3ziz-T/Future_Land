@@ -43,14 +43,21 @@
                 d="M33.9891 35.9396C33.5776 30.9053 28.7196 27.0224 23.6196 27.0973C18.6034 27.171 14.7943 31.2722 14.4022 36.2249C13.9969 41.3441 17.5983 45.387 22.7554 45.9229C28.4533 46.5149 34.4514 41.5945 33.9891 35.9396Z"
                 fill="#8DC543" />
         </svg>
-
-        <nav slot="nav" class="nav flex relative z-50 border md:border-none">
+        <input type="checkbox" name="" class="peer/burger hidden" id="toggle">
+        <nav slot="nav"
+            class="nav flex relative z-50 border md:border-none h-[296px] md:h-fit divide-y md:divide-y-0 peer-checked/burger:h-0 peer-checked/burger:opacity-0 overflow-hidden duration-300">
             <a href="/" class="nav-link link md:link-line font-medium">Home</a>
             <a href="/blogs" class="nav-link link md:link-line font-medium">blogs</a>
             <a href="/products" class="nav-link link md:link-line font-medium">Products</a>
             <a href="/about" class="nav-link link md:link-line font-medium">About</a>
             <a href="/contact" class="nav-link link md:link-line font-medium">Contact</a>
         </nav>
+        <label for="toggle" slot="burger" class="md:hidden">
+            <svg class="burger-menu select-none w-8 h-8 cursor-pointer duration-150 hover:fill-green-500"
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
+            </svg>
+        </label>
     </header-component>
     <div id="app"></div>
     <loading-component></loading-component>

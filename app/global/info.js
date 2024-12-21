@@ -1,6 +1,7 @@
 const companyInfo = {
 	name: "Future Land",
-	description: "This is my app",
+	description:
+		"We're specialize in a variety of food products, serving both B2B and B2C markets in Dubai, UAE.",
 	address: {
 		country: "Dubai UAE",
 		state: "Al Baraha",
