@@ -3,6 +3,7 @@ import "./app/components/shared/footerComponent/footer.js";
 import "./app/components/shared/loadingComponent/loading.js";
 import "./app/components/shared/upComponent/up.js";
 import "./app/components/shared/chatComponent/chat.js";
+
 import Router from "./router.js";
 class App {
 	routes = [
@@ -47,7 +48,8 @@ class App {
 		new Router(
 			"#app",
 			this.routes,
-			Array.from(document.body.querySelectorAll(".nav-link"))
+			Array.from(document.body.querySelectorAll(".nav-link")),
+			"active"
 		);
 	}
 }

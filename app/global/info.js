@@ -2,13 +2,13 @@ const companyInfo = {
 	name: "Future Land",
 	description: "This is my app",
 	address: {
-		street: "123 Main St",
-		city: "New York",
-		state: "NY",
+		country: "Dubai UAE",
+		state: "Al Baraha",
+		place: "Office 104",
 		zip: "10001",
 	},
 	contacts: {
-		countryCode: "+971",
+		countryCode: "+00 971",
 		phone: "50 962 2996",
 		email: "Info@futureslandfood.com",
 	},

@@ -44,7 +44,7 @@
                 fill="#8DC543" />
         </svg>
 
-        <nav slot="nav" class="nav flex">
+        <nav slot="nav" class="nav flex relative z-50 border md:border-none">
             <a href="/" class="nav-link link md:link-line font-medium">Home</a>
             <a href="/blogs" class="nav-link link md:link-line font-medium">blogs</a>
             <a href="/products" class="nav-link link md:link-line font-medium">Products</a>
@@ -53,7 +53,7 @@
         </nav>
     </header-component>
     <div id="app"></div>
-    <loading-component data-loading_state=false></loading-component>
+    <loading-component></loading-component>
     <up-component></up-component>
     <chat-component></chat-component>
     <footer-component></footer-component>

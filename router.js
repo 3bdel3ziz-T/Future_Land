@@ -1,18 +1,26 @@
-// import LoadingComponent from "./app/components/shared/loadingComponent/loading.js";
+import LoadingComponent from "./app/components/shared/loadingComponent/loading.js";
 export default class Router {
-	constructor(appElSelector, routes, navLinksArr) {
+	constructor(
+		appElSelector = "#app",
+		routes,
+		navLinksArr = Array.from(document.body.querySelectorAll(".nav-link")),
+		activeStateClass = "active"
+	) {
 		this.appElSelector = appElSelector;
 		this.routes = routes;
 		this.navLinksArr = navLinksArr;
-		this.init();
+		this.activeStateClass = activeStateClass;
 		// Handle initial page load
-		this.handleLocation(window.location.pathname);
-		window.addEventListener("popstate", () => {
-			this.handleLocation(window.location.pathname, false);
-		});
+		this.init();
 	}
 
 	init() {
+		// Handle initial page path
+		this.handleLocation(window.location.pathname);
+		// Handle page changes with arrows => back/forward
+		window.addEventListener("popstate", () => {
+			this.handleLocation(window.location.pathname, false);
+		});
 		// Handle link clicks
 		document.addEventListener("click", (e) => {
 			if (e.target.matches("a")) {
@@ -37,12 +45,12 @@ export default class Router {
 			if (component.path === route.path) route.isLinkActive = true;
 		});
 		this.navLinksArr.forEach((link) => {
-			link.classList.remove("active");
+			link.classList.remove(`${this.activeStateClass}`);
 			if (
 				component.href === link.getAttribute("href") &&
 				component.isLinkActive
 			)
-				link.classList.add("active");
+				link.classList.add(`${this.activeStateClass}`);
 		});
 	}
 
@@ -55,13 +63,14 @@ export default class Router {
 			.catch((error) => {
 				//to handle if the href doesn't match any of the routes array
 				this.getMatch("/404").then((p404Component) => {
-					if (pushState) history.pushState(null, null, p404Component.href);
+					history.pushState(null, null, p404Component.href);
 					this.loadComponent(p404Component);
 				});
 			});
 	}
 	async loadComponent(component) {
 		const app = document.querySelector(this.appElSelector);
+		LoadingComponent.prototype.start();
 		try {
 			import(component.path)
 				.then(() => {
@@ -78,6 +87,8 @@ export default class Router {
 				});
 		} catch (error) {
 			console.error(error);
+		} finally {
+			LoadingComponent.prototype.stop();
 		}
 	}
 }

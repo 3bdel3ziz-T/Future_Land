@@ -17,5 +17,6 @@ export default class HomeComponent extends HTMLElement {
 	}
 }
 
+
 // Register the custom element
 window.customElements.define("home-component", HomeComponent);

@@ -12,7 +12,7 @@ export default class HeaderComponent extends HTMLElement {
 		this.shadowRoot.innerHTML = `
 		<link rel="stylesheet" href="${this.styleSheetPath}">
 		${await renderView(this.templatePath)}`;
-		// this.linkActiveState(this.shadowRoot)
+
 		window.addEventListener("resize", () => {
 			if (window.innerWidth < 768) {
 				const burger = this.shadowRoot.querySelector("#toggle");
@@ -22,6 +22,18 @@ export default class HeaderComponent extends HTMLElement {
 				burger.checked = false;
 			}
 		});
+
+		// window.addEventListener("DOMContentLoaded", () => {
+		// 	if (window.innerWidth < 768) {
+		// 		console.log('true')
+		// 		const burger = this.shadowRoot.querySelector("#toggle");
+		// 		burger.checked = true;
+		// 	} else {
+		// 		console.log('false')
+		// 		const burger = this.shadowRoot.querySelector("#toggle");
+		// 		burger.checked = false;
+		// 	}
+		// });
 	}
 }
 

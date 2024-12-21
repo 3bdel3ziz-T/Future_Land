@@ -6,15 +6,21 @@ export default class LoadingComponent extends HTMLElement {
 	constructor() {
 		super();
 		this.attachShadow({ mode: "open" });
+		// this.start()
 	}
 
 	async connectedCallback() {
 		this.shadowRoot.innerHTML = `
       <link rel="stylesheet" href="${this.styleSheetPath}">
-      <div 
-      class='${this.dataset.loading_state != "true" ? "hidden" : false}'>
-        ${await renderView(this.templatePath)}
-        </div>`;
+        ${await renderView(this.templatePath)}`;
+	}
+	start() {
+		const loadingEl = document.querySelector("loading-component");
+		loadingEl.classList.remove("hidden");
+	}
+	stop() {
+		const loadingEl = document.querySelector("loading-component");
+		loadingEl.classList.add("hidden");
 	}
 }
 

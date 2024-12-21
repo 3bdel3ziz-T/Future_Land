@@ -1,6 +1,6 @@
 <footer class=" text-Dark">
     <div class="custom-container">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 py-10">
             <!-- About Section -->
             <div class="space-y-4">
 
@@ -22,40 +22,9 @@
                 </div>
                 <p class="text-gray-400">
                     {{description}}
+                    <span class="block">Address: {{ address.country}}, {{address.state}}, {{address.place }}</span>
                 </p>
             </div>
-
-            <!-- Quick Links -->
-            <div class="space-y-4">
-                <div class="relative flex items-center">
-                    <div class="marker -translate-x-7 w-12 -rotate-[65deg]">
-                    </div>
-                    <div class="marker -translate-x-5 w-16 -rotate-[35deg]">
-                    </div>
-                    <div class="marker translate-x-3 w-12 -rotate-[45deg]">
-                    </div>
-                    <div class="marker translate-x-6 w-12 -rotate-[75deg]">
-                    </div>
-                    <div class="marker translate-x-9 w-14 -rotate-[40deg]">
-                    </div>
-                    <div class="marker translate-x-14 w-12 -rotate-[65deg]">
-                    </div>
-                    <h3 class="relative  text-lg font-semibold text-white z-10">
-                        Quick Links
-                    </h3>
-                    <span class="flex-1 border-b-2 block border-gray-300 mx-6"></span>
-                </div>
-                <ul class="space-y-2">
-                    <li><a href="#" class="text-gray-400 hover:text-Green transition-colors duration-300">Home</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-Green transition-colors duration-300">Services</a>
-                    </li>
-                    <li><a href="#" class="text-gray-400 hover:text-Green transition-colors duration-300">Products</a>
-                    </li>
-                    <li><a href="#" class="text-gray-400 hover:text-Green transition-colors duration-300">Contact</a>
-                    </li>
-                </ul>
-            </div>
-
             <!-- Contact Info -->
             <div class="space-y-4">
                 <div class="relative flex items-center">
@@ -78,13 +47,42 @@
 
                 </div>
                 <ul class="space-y-2 text-gray-400">
-                    <li>Email:<a mailto=" {{contact.email}} ">{{contacts.email }}</a></li>
-                    <li>Phone:{{ contacts.countryCode}} {{ contacts.phone }}</li>
-                    <li>Address: {{address.street }}, {{ address.city}}, {{address.country}}</li>
+                    <li>Email:<a mailto=" {{contact.email}} "> {{contacts.email }}</a></li>
+                    <li>Phone: {{ contacts.countryCode}} {{ contacts.phone }}</li>
                 </ul>
             </div>
-
             <!-- Social Links -->
+            <div class="space-y-4">
+                <div class="relative flex items-center">
+                    <div class="marker -translate-x-7 w-12 -rotate-[65deg]">
+                    </div>
+                    <div class="marker -translate-x-5 w-16 -rotate-[35deg]">
+                    </div>
+                    <div class="marker translate-x-3 w-12 -rotate-[45deg]">
+                    </div>
+                    <div class="marker translate-x-6 w-12 -rotate-[75deg]">
+                    </div>
+                    <div class="marker translate-x-9 w-14 -rotate-[40deg]">
+                    </div>
+                    <div class="marker translate-x-14 w-12 -rotate-[65deg]">
+                    </div>
+                    <div class="marker translate-x-16 w-14 -rotate-[40deg]">
+                    </div>
+                    <h3 class="relative  text-lg font-semibold text-white z-10">
+                        Us On Media
+                    </h3>
+                    <span class="flex-1 border-b-2 block border-gray-300 mx-6"></span>
+                </div>
+                <ul class="space-y-2">
+                    <li><a target="_blank" href="https://www.instagram.com/futureslanddubai/"
+                            class="text-gray-400 hover:text-transparent font-semibold text-center text-xl bg-gradient-to-br from-[#8C3AAA] via-[#DD3C71] to-[#FA8F21] bg-clip-text duration-150">instagram</a>
+                    </li>
+                    <li><a target="_blank" href="https://www.facebook.com/futurelanddubai"
+                            class="text-gray-400 font-semibold text-center text-xl hover:text-[#1877F2] duration-150">facebook</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Newsletters -->
             <div class="space-y-4 ">
                 <div class="flex flex-col items-center justify-center light">
                     <div class="w-full max-w-md bg-white rounded-lg shadow-md p-6">
@@ -102,7 +100,8 @@
                             </button>
                         </form>
 
-                        <div class="flex justify-center mt-4">
+                        <div class="flex justify-center gap-2 mt-4">
+                            <input type="checkbox" class="accent-Green" checked>
                             <a href="#" class="text-sm text-Dark hover:underline">Privacy Policy</a>
                         </div>
                     </div>
