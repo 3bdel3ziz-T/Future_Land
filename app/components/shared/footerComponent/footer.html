@@ -23,7 +23,10 @@
                 <p>
                     {{description}}
                 </p>
-                <div>Location: {{ address.country}}, {{address.state}}, {{address.place }}</div>
+                <div>Location: {{ address.country}}, {{address.state}}, {{address.place }}
+                    <copy-component
+                        copyText="{{ address.country}}, {{address.state}}, {{address.place }}"></copy-component>
+                </div>
             </div>
             <!-- Contact Info -->
             <div class="space-y-4">
@@ -47,8 +50,16 @@
 
                 </div>
                 <ul class="space-y-2 text-gray-400">
-                    <li>Email:<a mailto=" {{contact.email}} "> {{contacts.email }}</a></li>
-                    <li>Phone: {{ contacts.countryCode}} {{ contacts.phone }}</li>
+                    <li>Email: <a href="mailto:{{contacts.email}}"
+                            class="font-semibold hover:text-Green hover:underline text-nowrap cursor-pointer">
+                            {{contacts.email }} </a>
+                        <copy-component copyText=" {{contacts.email}} "></copy-component>
+                    </li>
+                    <li>Phone: <a href="tel:{{contacts.phone}}"
+                            class="font-semibold hover:text-Green hover:underline text-nowrap cursor-pointer">
+                            {{contacts.countryCode}} {{contacts.phone }}</a>
+                        <copy-component copyText=" {{contacts.countryCode}} {{contacts.phone }} "></copy-component>
+                    </li>
                 </ul>
             </div>
             <!-- Social Links -->

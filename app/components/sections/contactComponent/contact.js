@@ -1,6 +1,7 @@
 import { renderView } from "../../../core/renderView.js";
 import { injector } from "../../../core/dataInjector.js";
 import { companyInfo as info } from "../../../global/info.js";
+import "../../shared/copyComponent/copy.js";
 export default class ContactComponent extends HTMLElement {
 	styleSheetPath = "./app/styles/output.css";
 	templatePath = "./app/components/sections/contactComponent/contact.html";

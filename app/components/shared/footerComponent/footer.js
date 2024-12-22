@@ -2,6 +2,8 @@ import { companyInfo as info } from "../../../global/info.js";
 import { renderView } from "../../../core/renderView.js";
 import { injector } from "../../../core/dataInjector.js";
 
+import "../copyComponent/copy.js";
+
 export default class FooterComponent extends HTMLElement {
 	styleSheetPath = "./app/styles/output.css";
 	templatePath = "./app/components/shared/footerComponent/footer.html";
@@ -9,6 +11,10 @@ export default class FooterComponent extends HTMLElement {
 	constructor() {
 		super();
 		this.attachShadow({ mode: "open" });
+	}
+
+	onHover() {
+		console.log("Hover event triggered");
 	}
 
 	async connectedCallback() {

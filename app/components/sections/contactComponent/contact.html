@@ -8,7 +8,13 @@
           <p>Call our team {{working.weekFrom}}-{{working.weekTo}} from {{working.timeFrom}} to {{working.timeTo}}.
           </p>
           <p class="mt-2 flex items-center">
-            {{contacts.countryCode}} {{contacts.phone}}
+            <a class="hover:underline hover:text-Green" href="tel:{{contacts.countryCode}} {{contacts.phone}}">
+              {{contacts.countryCode}} {{contacts.phone}}</a>
+            <copy-component copyText=" {{contacts.countryCode}} {{contacts.phone}}"></copy-component>
+          </p>
+          <p class="mt-2 flex items-center">
+            <a class="hover:underline hover:text-Green" href="malito:{{contacts.email}}"> {{contacts.email}}</a>
+            <copy-component copyText=" {{contacts.email}} "></copy-component>
           </p>
         </div>
         <div>
@@ -16,7 +22,6 @@
           <p>Speak to our friendly team via live chat.</p>
           <ul class="mt-2 space-y-2">
             <li class="flex items-center">
-              Start a live chat
             </li>
             <li class="flex items-center">
               Shoot us an email
@@ -31,11 +36,13 @@
           <p>Chat to us in person at our Melbourne HQ.</p>
           <p class="mt-2 flex items-center">
             {{address.country}}, {{address.state}}, {{address.place}}
+            <copy-component copyText="{{address.country}}, {{address.state}}, {{address.place}}
+            "></copy-component>
           </p>
         </div>
       </div>
       <form
-        class="grid gap-5 sm:gap-6 grid-cols-1 w-full xs:w-fit xs:grid-cols-2 bg-white shadow-md rounded-lg p-6 space-6">
+        class="grid gap-5 sm:gap-6 grid-cols-1 w-full xs:w-fit xs:grid-cols-2 bg-white shadow-md rounded-lg p-6 space-y-6">
         <label for="first_name" class="relative">
           <input type="text" id="first_name" placeholder="First name" inputmode="text" required autocomplete="off"
             class="  border rounded-lg px-4 py-2 w-full invalid:not-placeholder-shown:invalid-field" />
