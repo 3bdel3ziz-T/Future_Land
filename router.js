@@ -55,6 +55,7 @@ export default class Router {
 	}
 
 	async handleLocation(href, pushState = true) {
+		LoadingComponent.prototype.start();
 		await this.getMatch(href)
 			.then((component) => {
 				if (pushState) history.pushState(null, null, href);
@@ -70,7 +71,6 @@ export default class Router {
 	}
 	async loadComponent(component) {
 		const app = document.querySelector(this.appElSelector);
-		LoadingComponent.prototype.start();
 		try {
 			import(component.path)
 				.then(() => {
