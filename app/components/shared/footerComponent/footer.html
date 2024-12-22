@@ -50,10 +50,11 @@
 
                 </div>
                 <ul class="space-y-2 text-gray-400">
-                    <li>Email: <a href="mailto:{{contacts.email}}"
-                            class="font-semibold hover:text-Green hover:underline text-nowrap cursor-pointer">
-                            {{contacts.email }} </a>
-                        <copy-component copyText=" {{contacts.email}} "></copy-component>
+                    <li>Email: <div class="inline-block text-nowrap"><a href="mailto:{{contacts.email}}"
+                                class="font-semibold hover:text-Green hover:underline cursor-pointer">
+                                {{contacts.email }} </a>
+                            <copy-component copyText=" {{contacts.email}} ">
+                        </div></copy-component>
                     </li>
                     <li>Phone: <a href="tel:{{contacts.phone}}"
                             class="font-semibold hover:text-Green hover:underline text-nowrap cursor-pointer">
