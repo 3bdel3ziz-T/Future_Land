@@ -39,31 +39,48 @@ export default class ContactComponent extends HTMLElement {
 				regex: /^[0-9]{10}$/,
 				isMatched: false,
 			},
-			submit: {
-				input: submit,
-				isMatched: false,
-			},
 		};
 		for (let key in formObj) {
-			const { input, regex } = formObj[key];
+			const { input, regex, isMatched } = formObj[key];
 			input.addEventListener("input", () => {
-				this.regexCheck(input, regex);
+				this.checkValidation(input, regex, isMatched);
 			});
 		}
 		submit.addEventListener("click", (e) => {
 			e.preventDefault();
-			this.checkForm();
+			for (let key in formObj) {
+				const { input, regex, isMatched } = formObj[key];
+				if (!isMatched) {
+					this.checkValidation(input, regex, isMatched);
+				}
+			}
 		});
 	}
-	regexCheck(input, regex) {
-		if (input.value.test(regex)) {
+	checkValidation(input, regex, isMatched) {
+		const warnMsgEl = input.nextElementSibling;
+		if (regex.test(input.value)) {
 			input.classList.remove("invalid-field");
+			warnMsgEl.classList.add("opacity-0");
+			warnMsgEl.classList.remove("opacity-100");
 		} else {
 			input.classList.add("invalid-field");
-			const warnMsgEl = input.nextElementSibling;
+
 			warnMsgEl.classList.add("opacity-100");
-			warnMsgEl.textContent = `Please enter a valid ${input.placeholder}`;
+			warnMsgEl.classList.remove("opacity-0");
+			regex.test(input.value)
+				? (warnMsgEl.textContent = `Please don't use special characters`)
+				: input.value.length < 4
+				? (warnMsgEl.textContent = `Please enter at least 4 characters`)
+				: (warnMsgEl.textContent = `Please inter a valid ${input.placeholder}`);
 		}
+		// if (input.value.test(regex)) {
+		// 	input.classList.remove("invalid-field");
+		// } else {
+		// 	input.classList.add("invalid-field");
+		// 	const warnMsgEl = input.nextElementSibling;
+		// 	warnMsgEl.classList.add("opacity-100");
+		// 	warnMsgEl.textContent = `Please enter a valid ${input.placeholder}`;
+		// }
 	}
 }
 
