@@ -17,19 +17,52 @@ export default class ContactComponent extends HTMLElement {
 		const form = Array.from(
 			this.shadowRoot.querySelectorAll("form label input")
 		);
-		// const [firstName, lastName, email, phone, textarea] = form;
-
-		// this.checkFormValidation(firstName, lastName, email, phone, textarea);
-		// 	Array.from(this.shadowRoot.querySelectorAll("form label input"));
+		const [firstName, lastName, email, phone, submit] = form;
+		const formObj = {
+			firstName: {
+				input: firstName,
+				regex: /^[a-zA-Z]{4,12}$/,
+				isMatched: false,
+			},
+			lastName: {
+				input: lastName,
+				regex: /^[a-zA-Z]{4,12}$/,
+				isMatched: false,
+			},
+			email: {
+				input: email,
+				regex: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+				isMatched: false,
+			},
+			phone: {
+				input: phone,
+				regex: /^[0-9]{10}$/,
+				isMatched: false,
+			},
+			submit: {
+				input: submit,
+				isMatched: false,
+			},
+		};
+		for (let key in formObj) {
+			const { input, regex } = formObj[key];
+			input.addEventListener("input", () => {
+				this.regexCheck(input, regex);
+			});
+		}
+		submit.addEventListener("click", (e) => {
+			e.preventDefault();
+			this.checkForm();
+		});
 	}
 	regexCheck(input, regex) {
-		if (input.value.match(regex)) {
+		if (input.value.test(regex)) {
 			input.classList.remove("invalid-field");
 		} else {
 			input.classList.add("invalid-field");
-			const wrongMessageEl = input.nextElementSibling;
-			wrongMessageEl.classList.add("opacity-100");
-			wrongMessageEl.textContent = `Please enter a valid ${input.placeholder}`;
+			const warnMsgEl = input.nextElementSibling;
+			warnMsgEl.classList.add("opacity-100");
+			warnMsgEl.textContent = `Please enter a valid ${input.placeholder}`;
 		}
 	}
 }

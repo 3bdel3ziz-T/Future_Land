@@ -14,9 +14,18 @@ export default class HomeComponent extends HTMLElement {
 		this.shadowRoot.innerHTML = `
     <link rel="stylesheet" href="${this.styleSheetPath}">
   ${await renderView(this.templatePath)}`;
+
+		const svgHeroPath = this.shadowRoot.querySelector(".svg-path-hero");
+		const pathHeroLength = svgHeroPath.getTotalLength();
+		svgHeroPath.style.cssText = `
+			stroke-dasharray: ${pathHeroLength} ${pathHeroLength};
+			stroke-dashoffset: ${pathHeroLength};`;
+		svgHeroPath.addEventListener("animationend", () => {
+			svgHeroPath.classList.remove("animate-drawSvg");
+			svgHeroPath.classList.add("animate-undrawHeroSvg");
+		});
 	}
 }
-
 
 // Register the custom element
 window.customElements.define("home-component", HomeComponent);
