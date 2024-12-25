@@ -12,6 +12,16 @@ export default class ChatComponent extends HTMLElement {
 		this.shadowRoot.innerHTML = `
 		<link rel="stylesheet" href="${this.styleSheetPath}">
 		${await renderView(this.templatePath)}`;
+		const label = this.shadowRoot.querySelector("label[for='chat']");
+		const input = this.shadowRoot.querySelector("#chat");
+		setInterval(() => {
+			if (!input.checked) {
+				label.classList.add("animate-chat");
+				setTimeout(() => {
+					label.classList.remove("animate-chat");
+				}, 1200);
+			}
+		}, 5000);
 	}
 }
 

@@ -18,7 +18,7 @@
 	.invalid-field {
 		@apply border border-red-500 border-solid animate-invalid_field;
 	}
-	.btn-dark {
+	.btn-Dark {
 		@apply bg-Dark text-white rounded-md p-2 hover:bg-transparent hover:text-Dark border-2 hover:border-Dark font-medium transition ease-in-out duration-150;
 	}
 	.marker {

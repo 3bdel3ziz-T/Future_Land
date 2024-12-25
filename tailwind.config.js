@@ -13,8 +13,19 @@ module.exports = {
 				drawSvg: "drawPath 2.5s ease-in 0s 1 forwards",
 				undrawHeroSvg: "undrawHeroPath 2s ease-out 0s 1 backwards",
 				undrawValuesPath: "undrawValuesPath 2s ease-out 0s 1 backwards",
+				chat: "chat 1200ms ease-in-out 0s 1 backwards",
 			},
 			keyframes: {
+				chat: {
+					"0%": { transform: "rotate(6deg) scale(1)" },
+					"15%": { transform: "rotate(12deg) scale(1.15)" },
+					"30%": { transform: "rotate(-12deg) scale(1.15)" },
+					"45%": { transform: "rotate(9deg) scale(1.15)" },
+					"60%": { transform: "rotate(-9deg) scale(1.15)" },
+					"75%": { transform: "rotate(6deg) scale(1.15)" },
+					"90%": { transform: "rotate(-6deg) scale(1.15)" },
+					"100%": { transform: "rotate(0deg) scale(1)" },
+				},
 				invalid: {
 					"0%": { transform: "translateX(0px)" },
 					"30%": { transform: "translateX(3px)" },

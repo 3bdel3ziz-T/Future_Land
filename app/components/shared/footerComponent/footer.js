@@ -20,7 +20,7 @@ export default class FooterComponent extends HTMLElement {
 	async connectedCallback() {
 		this.shadowRoot.innerHTML = `
 				<link rel="stylesheet" href="${this.styleSheetPath}">
-				${await injector(await renderView(this.templatePath), info)} `;
+				${injector(await renderView(this.templatePath), info)} `;
 		const year = this.shadowRoot.querySelector("#currentYear");
 		year.textContent = this.currentYear;
 	}

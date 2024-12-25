@@ -1,7 +1,7 @@
 //! this function injects data into the template with only one lvl of nesting
 //? @param {string} template - the template to inject data into as string
 //? @param {object} dataObj - the data to inject into the template as an object
-async function injector(template, dataObj) {
+function injector(template, dataObj) {
 	const dataAsEntries = Object.entries(dataObj);
 	const regex = /{{( +)?\w+(.\w+)?( +)?}}/g;
 	const templateWithData = template.replace(regex, (match) => {
