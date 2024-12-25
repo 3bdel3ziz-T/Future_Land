@@ -1,7 +1,6 @@
 import "../../shared/headingComponent/heading.js";
 import { renderView } from "../../../core/renderView.js";
-import { getThis } from "../../../core/getThis.js";
-import { injector } from "../../../core/dataInjector.js";
+import { repeater } from "../../../core/repeater.js";
 
 export default class BlogsComponent extends HTMLElement {
 	styleSheetPath = "./app/styles/output.css";
@@ -19,16 +18,11 @@ export default class BlogsComponent extends HTMLElement {
 		this.shadowRoot.innerHTML = `
     <link rel="stylesheet" href="${this.styleSheetPath}">
   ${await renderView(this.templatePath)}`;
-		await this.renderBlogs(this.shadowRoot);
-	}
-	async renderBlogs(template) {
-		const blogItemTemplate = await renderView(this.blogItemPath);
-		getThis(this.blogsPath).then((blogs) => {
-			const sideArticlesEl = template.querySelector("#side-articles");
-			for (let item of blogs) {
-				sideArticlesEl.innerHTML += injector(blogItemTemplate, item);
-			}
-		});
+		repeater(
+			this.shadowRoot.querySelector("#side-holder"),
+			this.blogsPath,
+			this.blogItemPath
+		);
 	}
 }
 

@@ -5,7 +5,7 @@
 		"description": "Hand-picked, naturally sweet Medjool dates. Perfect for snacking or special occasions.",
 		"price": 12.99,
 		"originalPrice": 15.99,
-		"image": "https://source.unsplash.com/800x600/?dates",
+		"img_src": "https://source.unsplash.com/800x600/?dates",
 		"category": "dates",
 		"badge": {
 			"text": "Best Seller",
@@ -20,7 +20,7 @@
 		"description": "A delightful mix of premium dried fruits including apricots, cranberries, and raisins.",
 		"price": 15.99,
 		"originalPrice": 18.99,
-		"image": "https://source.unsplash.com/800x600/?dried+fruits",
+		"img_src": "https://source.unsplash.com/800x600/?dried+fruits",
 		"category": "mixed",
 		"badge": {
 			"text": "New Arrival",
@@ -35,7 +35,7 @@
 		"description": "Sweet and chewy dried figs, packed with nutrients and natural goodness.",
 		"price": 9.99,
 		"originalPrice": 12.99,
-		"image": "https://source.unsplash.com/800x600/?dried+figs",
+		"img_src": "https://source.unsplash.com/800x600/?dried+figs",
 		"category": "figs",
 		"badge": {
 			"text": "Sale",
@@ -50,7 +50,7 @@
 		"description": "Semi-dry dates with a delicate honey-like taste. Perfect for baking and cooking.",
 		"price": 11.99,
 		"originalPrice": 13.99,
-		"image": "https://source.unsplash.com/800x600/?dates+fruit",
+		"img_src": "https://source.unsplash.com/800x600/?dates+fruit",
 		"category": "dates",
 		"badge": {
 			"text": "Organic",
@@ -65,7 +65,7 @@
 		"description": "Naturally sweet Turkish apricots, dried to perfection. Rich in vitamins and minerals.",
 		"price": 8.99,
 		"originalPrice": 10.99,
-		"image": "https://source.unsplash.com/800x600/?dried+apricots",
+		"img_src": "https://source.unsplash.com/800x600/?dried+apricots",
 		"category": "fruits",
 		"badge": {
 			"text": "Popular",
@@ -80,7 +80,7 @@
 		"description": "Naturally sweetened dried cranberries. Perfect for snacking, baking, or adding to cereals.",
 		"price": 7.99,
 		"originalPrice": 9.99,
-		"image": "https://source.unsplash.com/800x600/?cranberries",
+		"img_src": "https://source.unsplash.com/800x600/?cranberries",
 		"category": "fruits",
 		"badge": {
 			"text": "Healthy Choice",
