@@ -1368,6 +1368,102 @@ video {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
 }
 
+.bg-\[url\(\'\/img\/hero-pattern\.svg\'\)\]{
+  background-image: url('/img/hero-pattern.svg');
+}
+
+.bg-\[url\(\'\{\{small\}\}\'\)\]{
+  background-image: url('{{small}}');
+}
+
+.bg-\[url\(\'\{\{small_img\}\}\'\)\]{
+  background-image: url('{{small_img}}');
+}
+
+.bg-\[url\(\'\{\{_img\}\}\'\)\]{
+  background-image: url('{{_img}}');
+}
+
+.bg-\[url\(\'\{\{loading_img\}\}\'\)\]{
+  background-image: url('{{loading_img}}');
+}
+
+.bg-\[url\(\'\{\{loadingImg_src\}\}\'\)\]{
+  background-image: url('{{loadingImg_src}}');
+}
+
+.bg-\[url\(\'\.\.\/\.\.\/\.\.\/\'\)\]{
+  background-image: url('../../../');
+}
+
+.bg-\[url\(\'\.\.\/\.\.\/\.\.\/\.\.\/\'\)\]{
+  background-image: url('../../../../');
+}
+
+.bg-\[url\(\'\.\.\/\.\.\/\.\.\/\.\.\/assets\/services_imgs\/dates\.png\'\)\]{
+  background-image: url('../../../../assets/services_imgs/dates.png');
+}
+
+.bg-\[url\(\'\{\{img_src\}\}\'\)\]{
+  background-image: url('{{img_src}}');
+}
+
+.bg-\[url\(\'\.\.\/\'\)\]{
+  background-image: url('../');
+}
+
+.bg-\[url\(\'\.\/\'\)\]{
+  background-image: url('./');
+}
+
+.bg-\[url\(\'\.\/assets\'\)\]{
+  background-image: url('./assets');
+}
+
+.bg-\[url\(\'\.\/assets\/services_imgs\/dates\.png\'\)\]{
+  background-image: url('./assets/services_imgs/dates.png');
+}
+
+.bg-\[url\(\'\.\.\/assets\/services_imgs\/dates\.png\'\)\]{
+  background-image: url('../assets/services_imgs/dates.png');
+}
+
+.bg-\[url\(\'\'\)\]{
+  background-image: url('');
+}
+
+.bg-\[url\(\'\{\{lo\}\}\'\)\]{
+  background-image: url('{{lo}}');
+}
+
+.bg-\[url\(\'\{\{loading\}\}\'\)\]{
+  background-image: url('{{loading}}');
+}
+
+.bg-\[url\(\'\{\{loadingImage_src\}\}\'\)\]{
+  background-image: url('{{loadingImage_src}}');
+}
+
+.bg-\[url\(\'\{\{loadingImge_src\}\}\'\)\]{
+  background-image: url('{{loadingImge_src}}');
+}
+
+.bg-\[url\(\{\{loadingImg_src\}\}\)\]{
+  background-image: url({{loadingImg_src}});
+}
+
+.bg-\[url\(\)\]{
+  background-image: url();
+}
+
+.bg-\[url\(\'\.\.\/assets\/services_imgs\/small\/wheat\.png\'\)\]{
+  background-image: url('../assets/services_imgs/small/wheat.png');
+}
+
+.bg-\[url\(\'\{loadingImg_src\}\'\)\]{
+  background-image: url('{loadingImg_src}');
+}
+
 .from-\[\#8C3AAA\]{
   --tw-gradient-from: #8C3AAA var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(140 58 170 / 0) var(--tw-gradient-to-position);
@@ -1402,9 +1498,17 @@ video {
   --tw-gradient-to-position: 60%;
 }
 
+.bg-cover{
+  background-size: cover;
+}
+
 .bg-clip-text{
   -webkit-background-clip: text;
           background-clip: text;
+}
+
+.bg-no-repeat{
+  background-repeat: no-repeat;
 }
 
 .fill-gray-300{
@@ -1661,12 +1765,6 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.shadow-\[0_0_0_0_rgba\(0\2c 0\2c 0\2c 0\.2\)\]{
-  --tw-shadow: 0 0 0 0 rgba(0,0,0,0.2);
-  --tw-shadow-colored: 0 0 0 0 var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .shadow-lg{
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
@@ -1699,13 +1797,8 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-.backdrop-blur-lg{
-  --tw-backdrop-blur: blur(16px);
-  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-}
-
-.backdrop-filter{
+.backdrop-blur-sm{
+  --tw-backdrop-blur: blur(4px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
@@ -2042,6 +2135,14 @@ body {
   height: 0px;
 }
 
+.peer\/chat:checked ~ .peer-checked\/chat\:h-full{
+  height: 100%;
+}
+
+.peer\/chat:checked ~ .peer-checked\/chat\:w-full{
+  width: 100%;
+}
+
 .peer\/chat:checked ~ .peer-checked\/chat\:-translate-y-\[110\%\]{
   --tw-translate-y: -110%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -2052,14 +2153,12 @@ body {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.peer\/burger:checked ~ .peer-checked\/burger\:opacity-0{
-  opacity: 0;
+.peer\/chat:checked ~ .peer-checked\/chat\:bg-black\/20{
+  background-color: rgb(0 0 0 / 0.2);
 }
 
-.peer\/chat:checked ~ .peer-checked\/chat\:shadow-\[0_0_0_100rem_rgba\(0\2c 0\2c 0\2c 0\.2\)\]{
-  --tw-shadow: 0 0 0 100rem rgba(0,0,0,0.2);
-  --tw-shadow-colored: 0 0 0 100rem var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+.peer\/burger:checked ~ .peer-checked\/burger\:opacity-0{
+  opacity: 0;
 }
 
 .peer\/copy:checked ~ .peer-checked\/copy\:before\:content-\[\'Copied\'\]::before{

@@ -56,7 +56,7 @@
                             <copy-component copyText=" {{contacts.email}} ">
                         </div></copy-component>
                     </li>
-                    <li>Phone: <a href="tel:{{contacts.phone}}"
+                    <li>Phone: <a href="tel:{{contacts.countryCode}} {{contacts.phone}}"
                             class="font-semibold hover:text-Green hover:underline text-nowrap cursor-pointer">
                             {{contacts.countryCode}} {{contacts.phone }}</a>
                         <copy-component copyText=" {{contacts.countryCode}} {{contacts.phone }} "></copy-component>
@@ -114,7 +114,7 @@
 
                         <div class="flex justify-center gap-2 mt-4">
                             <input type="checkbox" class="accent-Green" checked>
-                            <a href="#" class="text-sm text-Dark hover:underline">Privacy Policy</a>
+                            <a href="" class="text-sm text-Dark hover:underline">Privacy Policy</a>
                         </div>
                     </div>
                 </div>

@@ -1,10 +1,16 @@
 import "../../shared/headingComponent/heading.js";
-import "../../shared/cardComponent/card.js";
 import { renderView } from "../../../core/renderView.js";
+import { repeater } from "../../../core/repeater.js";
 
 export default class HomeComponent extends HTMLElement {
 	styleSheetPath = "./app/styles/output.css";
 	templatePath = "./app/components/sections/homeComponent/home.html";
+	cardsDataPath = "./app/assets/data/home_data/cards.json";
+	cardsTemplatePath =
+		"./app/components/sections/homeComponent/cardTemplate/card.html";
+	valuesDataPath = "./app/assets/data/home_data/values.json";
+	valuesTemplatePath =
+		"./app/components/sections/homeComponent/valueTemplate/value.html";
 	constructor() {
 		super();
 		this.attachShadow({ mode: "open" });
@@ -14,6 +20,17 @@ export default class HomeComponent extends HTMLElement {
 		this.shadowRoot.innerHTML = `
     <link rel="stylesheet" href="${this.styleSheetPath}">
   ${await renderView(this.templatePath)}`;
+
+		repeater(
+			this.shadowRoot.querySelector("#services-holder"),
+			this.cardsDataPath,
+			this.cardsTemplatePath
+		);
+		repeater(
+			this.shadowRoot.querySelector("#values-holder"),
+			this.valuesDataPath,
+			this.valuesTemplatePath
+		);
 
 		const svgHeroPath = this.shadowRoot.querySelector(".svg-path-hero");
 		const pathHeroLength = svgHeroPath.getTotalLength();

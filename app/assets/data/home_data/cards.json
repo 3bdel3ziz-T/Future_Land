@@ -1,0 +1,23 @@
+[
+	{
+		"id": 1,
+		"img_src": "./app/assets/services_imgs/wheat.png",
+		"loadingImg_src": "../assets/services_imgs/small/wheat.png",
+		"title": "Title 1",
+		"description": "description 1"
+	},
+	{
+		"id": 2,
+		"img_src": "./app/assets/services_imgs/meat.png",
+		"loadingImg_src": "../assets/services_imgs/small/meat.png",
+		"title": "Title 2",
+		"description": "description 2"
+	},
+	{
+		"id": 3,
+		"img_src": "./app/assets/services_imgs/dates.png",
+		"loadingImg_src": "../assets/services_imgs/small/dates.png",
+		"title": "Title 3",
+		"description": "description 3"
+	}
+]
