@@ -53,13 +53,13 @@
                     <li>Email: <div class="inline-block text-nowrap"><a href="mailto:{{contacts.email}}"
                                 class="font-semibold hover:text-Green hover:underline cursor-pointer">
                                 {{contacts.email }} </a>
-                            <copy-component copyText=" {{contacts.email}} ">
+                            <copy-component copyText="{{contacts.email}}">
                         </div></copy-component>
                     </li>
-                    <li>Phone: <a href="tel:{{contacts.countryCode}} {{contacts.phone}}"
+                    <li>Phone: <a href="tel:+{{contacts.countryCode}} {{contacts.phone}}"
                             class="font-semibold hover:text-Green hover:underline text-nowrap cursor-pointer">
-                            {{contacts.countryCode}} {{contacts.phone }}</a>
-                        <copy-component copyText=" {{contacts.countryCode}} {{contacts.phone }} "></copy-component>
+                            +{{contacts.countryCode}} {{contacts.phone }}</a>
+                        <copy-component copyText="+{{contacts.countryCode}} {{contacts.phone }} "></copy-component>
                     </li>
                 </ul>
             </div>
@@ -86,11 +86,14 @@
                     <span class="flex-1 border-b-2 block border-gray-300 mx-6"></span>
                 </div>
                 <ul class="space-y-2">
-                    <li><a target="_blank" href="https://www.instagram.com/futureslanddubai/"
+                    <li><a target="_blank" href="{{socials.instagram}}"
                             class="text-gray-400 hover:text-transparent font-semibold text-center text-xl bg-gradient-to-br from-[#8C3AAA] via-[#DD3C71] to-[#FA8F21] bg-clip-text duration-150">instagram</a>
                     </li>
-                    <li><a target="_blank" href="https://www.facebook.com/futurelanddubai"
+                    <li><a target="_blank" href="{{socials.facebook}}"
                             class="text-gray-400 font-semibold text-center text-xl hover:text-[#1877F2] duration-150">facebook</a>
+                    </li>
+                    <li><a target="_blank" href="{{socials.whatsapp}}"
+                            class="text-gray-400 font-semibold text-center text-xl hover:text-[#00E571] duration-150">whatsapp</a>
                     </li>
                 </ul>
             </div>

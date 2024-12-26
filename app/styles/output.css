@@ -1360,108 +1360,16 @@ video {
   --tw-bg-opacity: 0.2;
 }
 
+.bg-\[url\(\'\{\{loadingImg_src\}\}\'\)\]{
+  background-image: url('{{loadingImg_src}}');
+}
+
 .bg-gradient-to-br{
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
 
 .bg-gradient-to-t{
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
-}
-
-.bg-\[url\(\'\/img\/hero-pattern\.svg\'\)\]{
-  background-image: url('/img/hero-pattern.svg');
-}
-
-.bg-\[url\(\'\{\{small\}\}\'\)\]{
-  background-image: url('{{small}}');
-}
-
-.bg-\[url\(\'\{\{small_img\}\}\'\)\]{
-  background-image: url('{{small_img}}');
-}
-
-.bg-\[url\(\'\{\{_img\}\}\'\)\]{
-  background-image: url('{{_img}}');
-}
-
-.bg-\[url\(\'\{\{loading_img\}\}\'\)\]{
-  background-image: url('{{loading_img}}');
-}
-
-.bg-\[url\(\'\{\{loadingImg_src\}\}\'\)\]{
-  background-image: url('{{loadingImg_src}}');
-}
-
-.bg-\[url\(\'\.\.\/\.\.\/\.\.\/\'\)\]{
-  background-image: url('../../../');
-}
-
-.bg-\[url\(\'\.\.\/\.\.\/\.\.\/\.\.\/\'\)\]{
-  background-image: url('../../../../');
-}
-
-.bg-\[url\(\'\.\.\/\.\.\/\.\.\/\.\.\/assets\/services_imgs\/dates\.png\'\)\]{
-  background-image: url('../../../../assets/services_imgs/dates.png');
-}
-
-.bg-\[url\(\'\{\{img_src\}\}\'\)\]{
-  background-image: url('{{img_src}}');
-}
-
-.bg-\[url\(\'\.\.\/\'\)\]{
-  background-image: url('../');
-}
-
-.bg-\[url\(\'\.\/\'\)\]{
-  background-image: url('./');
-}
-
-.bg-\[url\(\'\.\/assets\'\)\]{
-  background-image: url('./assets');
-}
-
-.bg-\[url\(\'\.\/assets\/services_imgs\/dates\.png\'\)\]{
-  background-image: url('./assets/services_imgs/dates.png');
-}
-
-.bg-\[url\(\'\.\.\/assets\/services_imgs\/dates\.png\'\)\]{
-  background-image: url('../assets/services_imgs/dates.png');
-}
-
-.bg-\[url\(\'\'\)\]{
-  background-image: url('');
-}
-
-.bg-\[url\(\'\{\{lo\}\}\'\)\]{
-  background-image: url('{{lo}}');
-}
-
-.bg-\[url\(\'\{\{loading\}\}\'\)\]{
-  background-image: url('{{loading}}');
-}
-
-.bg-\[url\(\'\{\{loadingImage_src\}\}\'\)\]{
-  background-image: url('{{loadingImage_src}}');
-}
-
-.bg-\[url\(\'\{\{loadingImge_src\}\}\'\)\]{
-  background-image: url('{{loadingImge_src}}');
-}
-
-.bg-\[url\(\{\{loadingImg_src\}\}\)\]{
-  background-image: url({{loadingImg_src}});
-}
-
-.bg-\[url\(\)\]{
-  background-image: url();
-}
-
-.bg-\[url\(\'\.\.\/assets\/services_imgs\/small\/wheat\.png\'\)\]{
-  background-image: url('../assets/services_imgs/small/wheat.png');
-}
-
-.bg-\[url\(\'\{loadingImg_src\}\'\)\]{
-  background-image: url('{loadingImg_src}');
 }
 
 .from-\[\#8C3AAA\]{
@@ -2048,6 +1956,11 @@ body {
 .hover\:text-Green:hover{
   --tw-text-opacity: 1;
   color: rgb(141 197 67 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-\[\#00E571\]:hover{
+  --tw-text-opacity: 1;
+  color: rgb(0 229 113 / var(--tw-text-opacity, 1));
 }
 
 .hover\:text-\[\#1877F2\]:hover{

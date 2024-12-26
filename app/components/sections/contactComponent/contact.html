@@ -8,9 +8,9 @@
           <p>Call our team {{working.weekFrom}}-{{working.weekTo}} from {{working.timeFrom}} to {{working.timeTo}}.
           </p>
           <p class="mt-2 flex items-center">
-            <a class="hover:underline hover:text-Green" href="tel:{{contacts.countryCode}} {{contacts.phone}}">
-              {{contacts.countryCode}} {{contacts.phone}}</a>
-            <copy-component copyText=" {{contacts.countryCode}} {{contacts.phone}}"></copy-component>
+            <a class="hover:underline hover:text-Green" href="tel:+{{contacts.countryCode}} {{contacts.phone}}">
+              +{{contacts.countryCode}} {{contacts.phone}}</a>
+            <copy-component copyText="+{{contacts.countryCode}} {{contacts.phone}}"></copy-component>
           </p>
           <p class="mt-2 flex items-center">
             <a class="hover:underline hover:text-Green" href="malito:{{contacts.email}}"> {{contacts.email}}</a>
