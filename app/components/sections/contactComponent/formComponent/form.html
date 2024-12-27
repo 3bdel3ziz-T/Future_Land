@@ -1,0 +1,45 @@
+<form class="grid gap-5 sm:gap-6 grid-cols-1 w-full xs:w-fit xs:grid-cols-2 bg-white shadow-md rounded-lg p-6">
+  <label for="first_name" class="relative">
+    <input type="text" id="first_name" name="first_name" placeholder="First name" inputmode="text" required
+      autocomplete="off" class="border rounded-lg px-4 py-2 w-full" />
+    <p class="absolute top-full opacity-0 duration-100 text-pink-600 text-xs">
+      only use letters, at least 4 characters.
+    </p>
+  </label>
+  <label for="last_name" class="relative">
+    <input type="text" id="last_name" name="last_name" placeholder="Last name" inputmode="text" required
+      autocomplete="off" class=" border rounded-lg px-4 py-2 w-full" />
+    <p class="absolute top-full opacity-0 duration-100 text-pink-600 text-xs">
+      only use letters, at least 4 characters.
+    </p>
+  </label>
+  <label for="email" class="relative xs:col-span-2">
+    <input type="email" id="email" name="email" placeholder="Email" inputmode="email" required autocomplete="off"
+      class=" border rounded-lg px-4 py-2 w-full" />
+    <p class="absolute top-full opacity-0 duration-100 text-pink-600 text-xs">
+      Please provide a valid email address. </p>
+  </label>
+
+  <label class="border rounded-lg relative xs:col-span-2 flex ">
+    <select class="text-sm outline-none h-8 border-r px-2 py-1 my-1">
+      <option>US</option>
+      <option>ES</option>
+      <option>MR</option>
+    </select>
+    <input type="text" id="phone" name="phone" placeholder="+ 000-000-000" required autocomplete="off"
+      inputmode="numeric" class="px-3 w-full py-2 appearance-none bg-transparent outline-none rounded-lg">
+    <p class="absolute top-full opacity-0 duration-100 text-pink-600 text-xs">
+      only use letters, at least 4 characters.
+    </p>
+  </label>
+  <label for="textarea" id="textarea" class="relative xs:col-span-2">
+    <textarea placeholder="Leave us a message..." id="textarea" rows="4" name="textarea"
+      class=" border rounded-lg px-4 py-2 w-full"></textarea>
+    <p class="absolute top-full opacity-0 duration-100 text-pink-600 text-xs">
+      only use letters, at least 4 characters.
+    </p>
+  </label>
+  <label for="submit" class=" w-full xs:col-span-2">
+    <input type="submit" id="submit" class="btn-Dark w-full" value="Send message">
+  </label>
+</form>

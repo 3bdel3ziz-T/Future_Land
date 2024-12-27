@@ -13,10 +13,6 @@ export default class FooterComponent extends HTMLElement {
 		this.attachShadow({ mode: "open" });
 	}
 
-	onHover() {
-		console.log("Hover event triggered");
-	}
-
 	async connectedCallback() {
 		this.shadowRoot.innerHTML = `
 				<link rel="stylesheet" href="${this.styleSheetPath}">
