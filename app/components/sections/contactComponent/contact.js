@@ -1,5 +1,5 @@
 import { getThis } from "../../../core/getThis.js";
-import { injector } from "../../../core/dataInjector.js";
+import { injector } from "../../../core/injector.js";
 import { companyInfo as info } from "../../../global/info.js";
 import "../../shared/copyComponent/copy.js";
 export default class ContactComponent extends HTMLElement {

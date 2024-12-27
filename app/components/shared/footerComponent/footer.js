@@ -1,6 +1,6 @@
 import { companyInfo as info } from "../../../global/info.js";
 import { getThis } from "../../../core/getThis.js";
-import { injector } from "../../../core/dataInjector.js";
+import { injector } from "../../../core/injector.js";
 
 import "../copyComponent/copy.js";
 

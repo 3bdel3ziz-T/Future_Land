@@ -1,5 +1,5 @@
 import { getThis } from "./getThis.js";
-import { injector } from "./dataInjector.js";
+import { injector } from "./injector.js";
 
 async function repeater(holderEl, dataJsonPath, repeatedItemPath) {
 	await getThis(repeatedItemPath)
