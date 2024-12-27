@@ -1,15 +1,14 @@
 import { getThis } from "./getThis.js";
-import { renderView } from "./renderView.js";
 import { injector } from "./dataInjector.js";
 
 async function repeater(holderEl, dataJsonPath, repeatedItemPath) {
-	renderView(repeatedItemPath)
+	await getThis(repeatedItemPath)
 		.then((itemTemplate) => {
 			getThis(dataJsonPath)
 				.then((items) => {
 					if (holderEl instanceof HTMLElement) {
 						let html = "";
-						for (let item of items) {
+						for (let item of JSON.parse(items)) {
 							html += injector(itemTemplate, item);
 						}
 						holderEl.innerHTML = html;

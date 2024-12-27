@@ -1,5 +1,5 @@
 import "../../shared/headingComponent/heading.js";
-import { renderView } from "../../../core/renderView.js";
+import { getThis } from "../../../core/getThis.js";
 import { repeater } from "../../../core/repeater.js";
 
 export default class productsComponent extends HTMLElement {
@@ -16,7 +16,7 @@ export default class productsComponent extends HTMLElement {
 	async connectedCallback() {
 		this.shadowRoot.innerHTML = `
     <link rel="stylesheet" href="${this.styleSheetPath}">
-		${await renderView(this.templatePath)}`;
+		${await getThis(this.templatePath)}`;
 		repeater(
 			this.shadowRoot.querySelector("#products-holder"),
 			this.productsPath,

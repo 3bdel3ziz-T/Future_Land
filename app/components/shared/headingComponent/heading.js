@@ -1,4 +1,4 @@
-import { renderView } from "../../../core/renderView.js";
+import { getThis } from "../../../core/getThis.js";
 
 export default class HeadingComponent extends HTMLElement {
 	styleSheetPath = "./app/styles/output.css";
@@ -11,7 +11,7 @@ export default class HeadingComponent extends HTMLElement {
 	async connectedCallback() {
 		this.shadowRoot.innerHTML = `
     <link rel="stylesheet" href="${this.styleSheetPath}">
-  ${await renderView(this.templatePath)}`;
+  ${await getThis(this.templatePath)}`;
 	}
 }
 

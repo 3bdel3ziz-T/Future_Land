@@ -1,4 +1,4 @@
-import { renderView } from "../../../core/renderView.js";
+import { getThis } from "../../../core/getThis.js";
 import { injector } from "../../../core/dataInjector.js";
 import { companyInfo as info } from "../../../global/info.js";
 import "../../shared/copyComponent/copy.js";
@@ -13,7 +13,7 @@ export default class ContactComponent extends HTMLElement {
 	async connectedCallback() {
 		this.shadowRoot.innerHTML = `
     <link rel="stylesheet" href="${this.styleSheetPath}">
-  ${await injector(await renderView(this.templatePath), info)}`;
+  ${await injector(await getThis(this.templatePath), info)}`;
 		const form = Array.from(
 			this.shadowRoot.querySelectorAll("form label input")
 		);

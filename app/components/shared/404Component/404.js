@@ -1,4 +1,4 @@
-import { renderView } from "../../../core/renderView.js";
+import { getThis } from "../../../core/getThis.js";
 export default class p404Component extends HTMLElement {
 	styleSheetPath = "./app/styles/output.css";
 	templatePath = "./app/components/shared/404Component/404.html";
@@ -10,7 +10,7 @@ export default class p404Component extends HTMLElement {
 	async connectedCallback() {
 		this.shadowRoot.innerHTML = `
     <link rel="stylesheet" href="${this.styleSheetPath}">
-  ${await renderView(this.templatePath)}`;
+  ${await getThis(this.templatePath)}`;
 	}
 }
 

@@ -1,7 +1,7 @@
-async function getThis(dataPath) {
+async function getThis(templatePath) {
 	try {
-		const response = await fetch(`${dataPath}`);
-		return JSON.parse(await response.text());
+		const response = await fetch(`${templatePath}`);
+		return await response.text();
 	} catch (error) {
 		console.error(`Error: ${error}`);
 	}

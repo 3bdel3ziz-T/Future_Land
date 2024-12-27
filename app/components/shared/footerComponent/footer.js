@@ -1,5 +1,5 @@
 import { companyInfo as info } from "../../../global/info.js";
-import { renderView } from "../../../core/renderView.js";
+import { getThis } from "../../../core/getThis.js";
 import { injector } from "../../../core/dataInjector.js";
 
 import "../copyComponent/copy.js";
@@ -20,7 +20,7 @@ export default class FooterComponent extends HTMLElement {
 	async connectedCallback() {
 		this.shadowRoot.innerHTML = `
 				<link rel="stylesheet" href="${this.styleSheetPath}">
-				${injector(await renderView(this.templatePath), info)} `;
+				${injector(await getThis(this.templatePath), info)} `;
 		const year = this.shadowRoot.querySelector("#currentYear");
 		year.textContent = this.currentYear;
 	}

@@ -1,5 +1,5 @@
 import "../../shared/headingComponent/heading.js";
-import { renderView } from "../../../core/renderView.js";
+import { getThis } from "../../../core/getThis.js";
 import { repeater } from "../../../core/repeater.js";
 
 export default class HomeComponent extends HTMLElement {
@@ -19,8 +19,12 @@ export default class HomeComponent extends HTMLElement {
 	async connectedCallback() {
 		this.shadowRoot.innerHTML = `
     <link rel="stylesheet" href="${this.styleSheetPath}">
-  ${await renderView(this.templatePath)}`;
+  ${await getThis(this.templatePath)}`;
 
+		await getThis("./app/assets/premium.svg").then((svg) => {
+			const premiumSvgEl = this.shadowRoot.querySelector(".premium-svg");
+			premiumSvgEl.innerHTML = svg;
+		});
 		repeater(
 			this.shadowRoot.querySelector("#services-holder"),
 			this.cardsDataPath,
@@ -40,6 +44,9 @@ export default class HomeComponent extends HTMLElement {
 		svgHeroPath.addEventListener("animationend", () => {
 			svgHeroPath.classList.remove("animate-drawSvg");
 			svgHeroPath.classList.add("animate-undrawHeroSvg");
+			svgHeroPath.addEventListener("animationend", () => {
+				svgHeroPath.parentElement.remove();
+			});
 		});
 	}
 }

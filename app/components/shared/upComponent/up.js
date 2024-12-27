@@ -1,4 +1,4 @@
-import { renderView } from "../../../core/renderView.js";
+import { getThis } from "../../../core/getThis.js";
 
 export default class UpComponent extends HTMLElement {
 	styleSheetPath = "./app/styles/output.css";
@@ -18,7 +18,7 @@ export default class UpComponent extends HTMLElement {
 	async connectedCallback() {
 		this.shadowRoot.innerHTML = `
 		<link rel="stylesheet" href="${this.styleSheetPath}">
-		${await renderView(this.templatePath)}`;
+		${await getThis(this.templatePath)}`;
 		const button = this.shadowRoot.querySelector("button");
 		window.onscroll = () => {
 			if (window.scrollY > 500) {
