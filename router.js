@@ -4,6 +4,7 @@ export default class Router {
 		this.appElSelector = appElSelector;
 		this.routes = routes;
 		this.activeStateClass = activeStateClass;
+		this.navLinksArr = document.querySelectorAll("nav a");
 		// Handle initial page load
 		this.init();
 	}
