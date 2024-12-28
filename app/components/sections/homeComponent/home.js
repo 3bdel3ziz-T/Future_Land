@@ -20,11 +20,6 @@ export default class HomeComponent extends HTMLElement {
 		this.shadowRoot.innerHTML = `
     <link rel="stylesheet" href="${this.styleSheetPath}">
   ${await getThis(this.templatePath)}`;
-
-		await getThis("./app/assets/premium.svg").then((svg) => {
-			const premiumSvgEl = this.shadowRoot.querySelector(".premium-svg");
-			premiumSvgEl.innerHTML = svg;
-		});
 		repeater(
 			this.shadowRoot.querySelector("#services-holder"),
 			this.cardsDataPath,

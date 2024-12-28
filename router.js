@@ -1,14 +1,8 @@
 import LoadingComponent from "./app/components/shared/loadingComponent/loading.js";
 export default class Router {
-	constructor(
-		appElSelector = "#app",
-		routes,
-		navLinksArr = Array.from(document.body.querySelectorAll(".nav-link")),
-		activeStateClass = "active"
-	) {
+	constructor(appElSelector = "#app", routes, activeStateClass = "active") {
 		this.appElSelector = appElSelector;
 		this.routes = routes;
-		this.navLinksArr = navLinksArr;
 		this.activeStateClass = activeStateClass;
 		// Handle initial page load
 		this.init();

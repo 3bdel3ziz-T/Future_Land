@@ -17,6 +17,7 @@ export default class FormComponent extends HTMLElement {
 			input: null,
 			regex: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
 			isValid: false,
+			rules: {},
 		},
 		phone: {
 			input: null,
@@ -69,23 +70,12 @@ export default class FormComponent extends HTMLElement {
 			input.classList.remove("invalid-field");
 			warnMsgEl.classList.add("opacity-0");
 			warnMsgEl.classList.remove("opacity-100");
+			isValid = true;
 		} else {
 			input.classList.add("invalid-field");
-
 			warnMsgEl.classList.add("opacity-100");
 			warnMsgEl.classList.remove("opacity-0");
-			if (!regex.test(input.value)) {
-				if (input.value.length < 4 && !input.type === "email") {
-					warnMsgEl.textContent = "only use letters, at least 4 characters.";
-				}
-			} else {
-				warnMsgEl.textContent = "Please don't use special characters";
-			}
-			// input.value.length < 4
-			// 	? (warnMsgEl.textContent = "only use letters, at least 4 characters.")
-			// 	: !regex.test(input.value)
-			// 	? (warnMsgEl.textContent = "Please don't use special characters")
-			// 	: (warnMsgEl.textContent = `Please provide a valid ${input.name}.`);
+			isValid = false;
 		}
 	}
 }

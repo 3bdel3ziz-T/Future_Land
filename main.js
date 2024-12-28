@@ -45,17 +45,11 @@ class App {
 		},
 	];
 	constructor() {
-		new Router(
-			"#app",
-			this.routes,
-			Array.from(document.body.querySelectorAll(".nav-link")),
-			"active"
-		);
+		new Router("#app", this.routes, "active");
 	}
 }
-new App();
 
 // Initialize the app when DOM is loaded
-// document.addEventListener("DOMContentLoaded", () => {
-// 	new App()
-// });
+document.addEventListener("DOMContentLoaded", () => {
+	new App()
+});
