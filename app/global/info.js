@@ -4,19 +4,19 @@ const companyInfo = {
 		"We're specialize in a variety of food products, serving both B2B and B2C markets in Dubai, UAE.",
 	address: {
 		country: "Dubai UAE",
-		state: "Al Baraha",
-		place: "Office 104",
-		zip: "10001",
+		state: "state",
+		place: "Office 000",
+		zip: "00000",
 	},
 	contacts: {
 		countryCode: 971,
-		phone: 509622996,
-		email: "Info@futureslandfood.com",
+		phone: 1234567890,
+		email: "Info@futureslandfoodexample.com",
 	},
 	socials: {
-		facebook: "https://www.facebook.com/futurelanddubai",
-		instagram: "https://www.instagram.com/futureslanddubai/",
-		whatsapp: "https://wa.me/971509622996",
+		facebook: "https://www.facebook.com/",
+		instagram: "https://www.instagram.com//",
+		whatsapp: "https://wa.me/",
 	},
 	working: {
 		timeFrom: "9am",
