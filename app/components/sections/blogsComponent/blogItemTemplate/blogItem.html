@@ -2,12 +2,15 @@
   <img src="{{img_src}}" alt="Article Image" class="rounded-lg w-28 h-28 object-cover" loading="lazy">
   <div>
     <p class="text-sm text-gray-600">{{date}}</p>
-    <h3 class="text-lg font-semibold mt-1">{{name}} {{title}}</h3>
+    <h2 class="text-lg font-semibold">
+      {{name}}
+    </h2>
+    <h3 class="text-md font-semibold mt-1">{{title}}</h3>
     <p class="text-sm text-gray-700 mt-2 line-clamp-2">
       {{description}}
     </p>
     <div class="flex gap-2 mt-2">
-      <a href="blog_url" class="px-3 py-1 btn-Dark text-sm rounded-md">see more</a>
+      <button href="blog_url" class="px-3 py-1 btn-Dark text-sm rounded-md">see more</button>
     </div>
   </div>
 </div>

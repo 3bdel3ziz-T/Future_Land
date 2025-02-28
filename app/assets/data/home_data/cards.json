@@ -3,21 +3,21 @@
 		"id": 1,
 		"img_src": "./app/assets/services_imgs/wheat.png",
 		"loadingImg_src": "../assets/services_imgs/small/wheat.png",
-		"title": "Title 1",
-		"description": "description 1"
+		"title": "Premium Wheat",
+		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus natus animi eligendi."
 	},
 	{
 		"id": 2,
 		"img_src": "./app/assets/services_imgs/meat.png",
 		"loadingImg_src": "../assets/services_imgs/small/meat.png",
-		"title": "Title 2",
-		"description": "description 2"
+		"title": "Frozen Meat",
+		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus natus animi eligendi."
 	},
 	{
 		"id": 3,
 		"img_src": "./app/assets/services_imgs/dates.png",
 		"loadingImg_src": "../assets/services_imgs/small/dates.png",
-		"title": "Title 3",
-		"description": "description 3"
+		"title": "Premium Dates",
+		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus natus animi eligendi."
 	}
 ]

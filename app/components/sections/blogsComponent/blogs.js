@@ -1,5 +1,6 @@
 import "../../shared/headingComponent/heading.js";
 import { getThis } from "../../../core/getThis.js";
+import { injector } from "../../../core/injector.js";
 import { repeater } from "../../../core/repeater.js";
 
 export default class BlogsComponent extends HTMLElement {
@@ -9,6 +10,14 @@ export default class BlogsComponent extends HTMLElement {
 	blogItemPath =
 		"./app/components/sections/blogsComponent/blogItemTemplate/blogItem.html";
 
+	mainArticle = {
+		name: "Main Article",
+		description:
+			"lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.",
+		date: "Oct 27, 2022",
+		img_src: "./app/assets/images/dates_4.png",
+	};
+
 	constructor() {
 		super();
 		this.attachShadow({ mode: "open" });
@@ -17,7 +26,8 @@ export default class BlogsComponent extends HTMLElement {
 	async connectedCallback() {
 		this.shadowRoot.innerHTML = `
     <link rel="stylesheet" href="${this.styleSheetPath}">
-  ${await getThis(this.templatePath)}`;
+  ${injector(await getThis(this.templatePath), this.mainArticle)}`;
+
 		repeater(
 			this.shadowRoot.querySelector("#side-holder"),
 			this.blogsPath,

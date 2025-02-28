@@ -86,4 +86,47 @@ export default class Router {
 			LoadingComponent.prototype.stop();
 		}
 	}
+
+	// async loadComponent(component) {
+	// 	try {
+	// 		await fetch(component.path).then((data) => {
+	// 			const response = data.text();
+	// 			console.log(response);
+	// 			this.appEl.innerHTML = `<${component.selector}></"${component.selector}">`;
+	// 		});
+	// 	} catch (error) {
+	// 		import(component.path)
+	// 			.then(() => {
+	// 				this.appEl.innerHTML = `<${component.selector}></"${component.selector}">`;
+	// 			})
+	// 			.catch(() => {
+	// 				//in case of the component file(s) doesn't exist or component path isn't work
+	// 				this.getMatch("/404").then((p404Component) => {
+	// 					history.pushState(null, null, p404Component.href);
+	// 					import(p404Component.path).then(() => {
+	// 						this.appEl.innerHTML = `<${p404Component.selector}></"${p404Component.selector}">`;
+	// 					});
+	// 				});
+	// 			});
+	// 	} finally {
+	// 		LoadingComponent.prototype.stop();
+	// 	}
+	// 	// try {
+	// 	// import(component.path)
+	// 	// 	.then(() => {
+	// 	// 		this.appEl.innerHTML = `<${component.selector}></"${component.selector}">`;
+	// 	// 	})
+	// 	// 	.catch(() => {
+	// 	// 		//in case of the component file(s) doesn't exist or component path isn't work
+	// 	// 		this.getMatch("/404").then((p404Component) => {
+	// 	// 			history.pushState(null, null, p404Component.href);
+	// 	// 			import(p404Component.path).then(() => {
+	// 	// 				this.appEl.innerHTML = `<${p404Component.selector}></"${p404Component.selector}">`;
+	// 	// 			});
+	// 	// 		});
+	// 	// 	});
+	// 	// } catch (error) {
+	// 	// 	console.error(error);
+	// 	// }
+	// }
 }

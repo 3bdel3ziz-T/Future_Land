@@ -1,34 +1,34 @@
 [
 	{
-		"name": "this is blog name",
-		"title": "Deglet Noor Dates: 7 Home made Recipes for a Naturally Candy Day",
-		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, eos? Quo, vero.",
+		"name": "",
+		"title": "The Health Benefits of Dates",
+		"description": "Dates are a powerhouse of nutrition, packed with fiber, vitamins, and minerals. They promote digestive health, improve heart function, and provide a natural energy boost.",
 		"date": "16 Des 2024",
-		"img_src": "",
+		"img_src": "./app/assets/images/dates_1.png",
 		"blog_url": ""
 	},
 	{
-		"name": "this is blog name",
-		"title": "this is blog title",
-		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, eos? Quo, vero.",
+		"name": "",
+		"title": "Different Types of Dates Around the World",
+		"description": "There are various types of dates worldwide, including Medjool, Barhi, and Khallas. Each variety has a unique taste, texture, and level of sweetness, making them a diverse and delicious fruit.",
 		"date": "17 mar 2019",
-		"img_src": "",
+		"img_src": "./app/assets/images/dates_4.png",
 		"blog_url": ""
 	},
 	{
-		"name": "this is blog name",
-		"title": "this is blog title",
-		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, eos? Quo, vero.",
+		"name": "",
+		"title": "How to Use Dates in Cooking",
+		"description": "Dates can be used in a wide range of recipes, from sweet desserts like date squares and energy bars to savory dishes that incorporate them as a natural sweetener.",
 		"date": "10 oct 2020",
-		"img_src": "",
+		"img_src": "./app/assets/images/dates_7.png",
 		"blog_url": ""
 	},
 	{
-		"name": "this is blog name",
-		"title": "this is blog title",
-		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, eos? Quo, vero.",
+		"name": "",
+		"title": "The History and Cultural Significance of Dates",
+		"description": "Dates have been an essential part of Middle Eastern and North African cultures for thousands of years. They are not only a staple food but also hold religious and historical significance.",
 		"date": "09 nov 2022",
-		"img_src": "",
+		"img_src": "./app/assets/images/dates_6.png",
 		"blog_url": ""
 	}
 ]

@@ -5,13 +5,14 @@
 		"description": "Hand-picked, naturally sweet Medjool dates. Perfect for snacking or special occasions.",
 		"price": 12.99,
 		"originalPrice": 15.99,
-		"img_src": "",
+		"reviews": "21",
+		"img_src": "./app/assets/images/dates_1.png",
 		"category": "dates",
 		"badge": {
 			"text": "Best Seller",
 			"color": "green"
 		},
-		"rating": 4.9,
+		"rating": 3.9,
 		"inStock": true
 	},
 	{
@@ -20,7 +21,8 @@
 		"description": "A delightful mix of premium dried fruits including apricots, cranberries, and raisins.",
 		"price": 15.99,
 		"originalPrice": 18.99,
-		"img_src": "",
+		"reviews": "38",
+		"img_src": "./app/assets/images/dates_2.png",
 		"category": "mixed",
 		"badge": {
 			"text": "New Arrival",
@@ -35,13 +37,14 @@
 		"description": "Sweet and chewy dried figs, packed with nutrients and natural goodness.",
 		"price": 9.99,
 		"originalPrice": 12.99,
-		"img_src": "",
+		"reviews": "16",
+		"img_src": "./app/assets/images/dates_3.png",
 		"category": "figs",
 		"badge": {
 			"text": "Sale",
 			"color": "red"
 		},
-		"rating": 4.7,
+		"rating": 4.0,
 		"inStock": true
 	},
 	{
@@ -50,7 +53,8 @@
 		"description": "Semi-dry dates with a delicate honey-like taste. Perfect for baking and cooking.",
 		"price": 11.99,
 		"originalPrice": 13.99,
-		"img_src": "",
+		"reviews": "18",
+		"img_src": "./app/assets/images/dates_4.png",
 		"category": "dates",
 		"badge": {
 			"text": "Organic",
@@ -65,13 +69,14 @@
 		"description": "Naturally sweet Turkish apricots, dried to perfection. Rich in vitamins and minerals.",
 		"price": 8.99,
 		"originalPrice": 10.99,
-		"img_src": "",
+		"reviews": "28",
+		"img_src": "./app/assets/images/dates_5.png",
 		"category": "fruits",
 		"badge": {
 			"text": "Popular",
 			"color": "blue"
 		},
-		"rating": 4.8,
+		"rating": 3.8,
 		"inStock": true
 	},
 	{
@@ -80,7 +85,24 @@
 		"description": "Naturally sweetened dried cranberries. Perfect for snacking, baking, or adding to cereals.",
 		"price": 7.99,
 		"originalPrice": 9.99,
-		"img_src": "",
+		"reviews": "15",
+		"img_src": "./app/assets/images/dates_6.png",
+		"category": "fruits",
+		"badge": {
+			"text": "Healthy Choice",
+			"color": "green"
+		},
+		"rating": 4.0,
+		"inStock": true
+	},
+	{
+		"id": 7,
+		"name": "Dried Cranberries",
+		"description": "Naturally sweetened dried cranberries. Perfect for snacking, baking, or adding to cereals.",
+		"price": 7.99,
+		"originalPrice": 9.99,
+		"reviews": "25",
+		"img_src": "./app/assets/images/dates_7.png",
 		"category": "fruits",
 		"badge": {
 			"text": "Healthy Choice",
@@ -88,5 +110,22 @@
 		},
 		"rating": 4.5,
 		"inStock": true
+	},
+	{
+		"id": 8,
+		"name": "Dried Cranberries",
+		"description": "Naturally sweetened dried cranberries. Perfect for snacking, baking, or adding to cereals.",
+		"price": 7.99,
+		"originalPrice": 9.99,
+		"reviews": "20",
+		"img_src": "./app/assets/images/dates_8.png",
+		"category": "fruits",
+		"badge": {
+			"text": "Healthy Choice",
+			"color": "green"
+		},
+		"rating": 3.5,
+		"inStock": true
 	}
+	
 ]

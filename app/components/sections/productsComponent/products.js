@@ -2,6 +2,8 @@ import "../../shared/headingComponent/heading.js";
 import { getThis } from "../../../core/getThis.js";
 import { repeater } from "../../../core/repeater.js";
 
+import RatingComponent from "../../shared/ratingComponent/rating.js";
+
 export default class productsComponent extends HTMLElement {
 	styleSheetPath = "./app/styles/output.css";
 	templatePath = "./app/components/sections/productsComponent/products.html";
